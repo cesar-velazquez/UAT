@@ -374,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
     annyang.addCommands(commands);
     annyang.addCallback("result", frases => {
         function escribir() {
+            console.log("usted hha dicho: " + frases);
             document.getElementById("container_notes").innerHTML = ' <b>Usted a dicho: </b>' + "'" + frases + "'";
         }
         escribir();
