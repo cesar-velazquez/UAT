@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Operación de Unidades de Accesibilidad Tecnológica (UAT)</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menuacces.css">
+
+    <!-- Libreria para animar  los recursos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Librería Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body onmousemove="detectarPosicionMouse(event);">
+    <div id="readline"></div>
+    <!-- Instrucción para información de ayuda -->
+    <div>
+        <p class="sr-only">
+            Instrucción: Para acceder a la información de ayuda de esta experiencia educativa en Windows presiona las
+            teclas Alt + i, en MacOS Option + i, Para cerrar la ventana con la información de ayuda en Windows presiona
+            las teclas Alt + X, en MacOS Esc
+        </p>
+    </div>
+
+    <!-- <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda"
+        data-toggle="modal" data-target="#information-1" accesskey="I">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </button> -->
+    <div id="container_notes" class="contenedor_notas">
+    </div>
+
+    <!-- Barra de progreso en la parte superior -->
+    <div id="progress"></div>
+
+    <!-- Prueba -->
+    <div class="ocultar">
+        <button onclick="handleMenu()" class="btnAccessUniversal">
+            <i class="fas fa-universal-access"></i>
+        </button>
+    </div>
+
+    <div class="microfono">
+        <i id="micro" class='bx bx-microphone'></i>
+    </div>
+
+    <!-- menuaccesShow -->
+    <div class="menuacces ">
+        <div class="menuComponentAcces">
+            <div class="sectionAcces">
+                <p class="mb-0 bold">Tamaño de fuente</p>
+                <div class="sectionBtnsacces">
+                    <button id="font_size" class="btn btn-access" aria-label="Información de ayuda"
+                        title="Información de ayuda">
+                        <i class='bx bx-font-size'></i>
+                    </button>
+                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
+                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
+                </div>
+            </div>
+            <div class="lineSectionacces"></div>
+
+            <div class="sectionAcces">
+                <p class="mb-0 bold">Cursor</p>
+                <div class="sectionBtnsacces">
+                    <button id="cursorBig" class="btn btn-access" aria-label="Información de ayuda"
+                        title="Información de ayuda">
+                        <i class='bx bxs-left-top-arrow-circle'></i>
+                    </button>
+                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
+                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
+                </div>
+            </div>
+            <div class="lineSectionacces"></div>
+
+            <div class="sectionAcces">
+                <p class="mb-0 bold">Lector Inmersivo</p>
+                <div class="sectionBtnsacces">
+                    <button id="" class="btn btn-access" aria-label="Información de ayuda" title="Información de ayuda"
+                        data-toggle="modal" data-target="#information-1" accesskey="i" aria-hidden="true">
+                        <i class='bx bxs-music'></i>
+                    </button>
+                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
+                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
+                </div>
+            </div>
+            <div class="lineSectionacces"></div>
+
+            <div class="sectionAcces section_voice">
+                <p class="mb-0 bold">Comando por voz</p>
+                <div class="sectionBtnsacces">
+                    <button id="btn-access" class="btn btn-access" aria-label="Botón accesibilidad">
+                        <i class="fas fa-universal-access"></i>
+                    </button>
+                    <a href="./descargables/Ayuda/ComandosporvozEE.pdf" target="_blank" class="questionAcces"><i
+                            class='bx bx-question-mark'></i></a>
+                </div>
+            </div>
+
+            <div class="lineSectionacces"></div>
+
+            <div class="sectionAcces">
+                <p class="mb-0 bold">Lectura fácil</p>
+                <div class="sectionBtnsacces">
+                    <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id=""
+                        class="btnLectura btn btn-access" aria-label="Botón accesibilidad">
+                        <i class='circleacces bx bx-left-arrow-circle'></i>
+                    </a>
+                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
+                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
+                </div>
+            </div>
+
+            <div class="lineSectionacces"></div>
+
+            <div class="sectionAcces">
+                <p class="mb-0 bold">Linea de lectura</p>
+                <div class="sectionBtnsacces">
+                    <button onclick="showLine()" id="" class="btnLectura btn btn-access"
+                        aria-label="Botón accesibilidad">
+                        <i class='bx bx-underline'></i>
+                    </button>
+                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
+                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Prueba Fin -->
+    <!-- Prueba -->
+
+    <!-- SIDEBAR MENÚ -->
+    <navbar id="menu-item" class="sidebar" style="overflow-y: scroll;">
+
+        <div class="sidebar__encabezado">
+            <button role="navigation" aria-details="Close side menu" class="btn btn-link sidebar__dismiss"
+                aria-label="Cerrar menú desplegado" accesskey="C">
+                <span class="sr-only">Close navigation menu</span>
+                <span>X</span>
+            </button>
+            <p id="ident2" class="identificador2 ">2</p>
+        </div>
+
+        <menu-component></menu-component>
+
+    </navbar>
+
+    <!-- PLECA Y TITULO -->
+    <header class="banner-1">
+
+        <div class="escritorio">
+
+            <div class="js-pleca pleca">
+
+                <a class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
+
+                <div class="dropdown">
+                    <!-- btn  -->
+                    <!-- <div class="container_menu"> -->
+                    <p id="ident1" class="identificador">1</p>
+                    <button class="btn btn-menu js-sidebar__collapse duration" type="button" id="dropdownMenuButton"
+                        accesskey="M" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="">MENÚ&nbsp;&nbsp;</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <!-- </div> -->
+                </div>
+
+                <div class="pleca__ee container ml-0" style="display: none;">
+                    <span class="text-left">
+                        <p class="tam-font font-weight-bold mb-3 texto-tema-margen margin-seginfo ocultar">
+                            Operación de Unidades de Accesibilidad Tecnológica (<span aria-hidden="true">UAT</span>
+                            <span class="sr-only">U A T</span>) <br aria-colspan="" aria-hidden="true" class="sr-only">
+                        </p>
+                    </span>
+                </div>
+
+
+                <div class="pleca__ee container ml-0" style="display: none;">
+                    <span class="text-left">
+                        <p class=" tam-font font-weight-bold mb-3 texto-tema-margen margin-seginfo-padding mostrar">
+                            Operación de Unidades de Accesibilidad Tecnológica (<span aria-hidden="true">UAT</span>
+                            <span class="sr-only">U A T</span>) <br aria-hidden="true" class="sr-only">
+                        </p>
+                    </span>
+                </div>
+
+
+
+            </div>
+            <img class="img__principal mb-4 ocultar" src="./images/SDI-_banner-e.png" alt="Banner principal"
+                aria-hidden="true" width="100%" height="auto">
+            <img class="mostrar" src="./images/SDI-_banner-r.png" alt="Banner Principal" aria-hidden="true" width="100%"
+                height="auto">
+
+        </div>
+        </div>
+
+        <h1 class="titulo-principal">
+            Operación de Unidades de Accesibilidad Tecnológica (<span aria-hidden="true">UAT</span> <span
+                class="sr-only">U A T</span>)
+
+        </h1>
+
+    </header>
+
+    <!-- Codigo principal -->
+    <main>
+
+        <section class="introduction">
+
+            <div class="container py-4">
+
+                <div id="ident1_6" class="cuadro-azul-degradado padding__escritorio padding__movil mt-4 mb-4">
+                    <!-- id="h_2" -->
+                    <h2 class="parrafo font-weight-bold subtitulosc text__color">
+                        Competencia
+                        <span id="ident6" class="identificador2">6</span>
+                    </h2>
+
+                    <p class="parrafo mb-0">
+                        Capacitar al personal responsable de las Unidades de Accesibilidad Tecnológica (<span
+                            aria-hidden="true">UAT</span> <span class="sr-only">U A T</span>) en las habilidades
+                        necesarias para su operación y mantenimiento, garantizando así un entorno educativo inclusivo en
+                        la Universidad Veracruzana mediante el conocimiento y la aplicación de las mejores prácticas en
+                        accesibilidad, discapacidad y operación de equipos tecnológicos específicos.
+                    </p>
+
+                </div>
+
+                <div id="ident1_7" class="mt-4 mt-md-5 padding__escritorio padding__movil">
+
+                    <h2 class="parrafo font-weight-bold subtitulost text__color">
+                        Descripción
+                        <span id="ident7" class="identificador2">7</span>
+                    </h2>
+
+                    <p class="parrafo">
+                        El personal estudiará las mejores prácticas para garantizar un funcionamiento óptimo de las
+                        instalaciones, abordando la “Guía de uso de las Unidades de Accesibilidad Tecnológica para el
+                        acceso a una educación inclusiva en la Universidad Veracruzana” incorporando temas como la
+                        accesibilidad, discapacidad e implementación de campus virtuales accesibles. En las sesiones se
+                        realizarán breves demostraciones sobre el funcionamiento del equipo disponible.
+                    </p>
+                    <p class="parrafo mb-0">
+                        La capacitación se adapta a la operación de las <span aria-hidden="true">UAT</span> <span
+                            class="sr-only">U A T</span>, asegurando que el personal esté completamente preparado para
+                        enfrentar los desafíos y responsabilidades. Al finalizar el curso, se espera que el personal
+                        esté dotado con la información necesaria y las herramientas tecnológicas apropiadas para
+                        satisfacer las necesidades educativas de la población estudiantil en condiciones de
+                        discapacidad, en todas las regiones universitarias.
+                    </p>
+
+                </div>
+
+        </section>
+
+        <section id="ident1_8" class="">
+            <div class="container">
+
+                <div class="seccion-content">
+
+                    <!-- subtitulost  -->
+                    <h2 class="parrafo text-azul subtitulost text__color">
+                        Contenido
+                        <span id="ident8" class="identificador2">8</span>
+                    </h2>
+
+                    <div class="section_topics">
+                        <div class="section_tema ">
+                            <p class=" parrafo padding_tema mb-0 ">
+                                <b>Tema 1.</b> Conceptos básicos
+                            </p>
+                        </div>
+
+
+                        <div class="section_tema">
+                            <p class="parrafo padding_tema mb-0 ">
+                                <b>Tema 2.</b> Unidades de Accesibilidad Tecnológica
+                            </p>
+                        </div>
+
+                        <div class="section_tema">
+                            <p class="parrafo padding_tema mb-0 ">
+                                <b>Tema 3.</b> Campus Virtuales Accesibles
+                            </p>
+                        </div>
+
+                        <div class="section_tema">
+                            <p class="parrafo padding_tema mb-0 ">
+                                Glosario
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+
+        <!-- experts_content padding__movil_contenido-->
+        <section id="ident1_9" class="container ">
+            <div class="py-5 padding__escritorio padding__movil">
+
+                <div class="">
+                    <h2 class="parrafo text-azul subtitulost text__color">
+                        Expertos en contenido
+                        <span id="ident9" class="identificador2">9</span>
+                    </h2>
+
+                </div>
+
+                <div class="escritorio ocultar">
+
+                    <div class="contenedor-expertos">
+
+                        <div class="tarjeta-designers">
+
+                            <p class="parrafo text-azul mb-2">
+                                <br aria-hidden="true">
+                                Juan Carlos Pérez Arriaga
+                            </p>
+
+                            <p class="parrafo mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <!-- btn btn-azul-modals waves-effect waves-light -->
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#methods-uno">
+                                + Info
+                                <span id="ident10" class="identificador2 btn_fuente">10</span>
+                            </button>
+
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+
+
+                            <p class="parrafo text-azul mb-2 text-center">
+                                Marbella Crystal Velasco Hernández
+                            </p>
+
+                            <p class="parrafo text-center mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#methods-2">
+                                + Info
+                                <span id="ident12" class="identificador2 btn_fuente">12</span>
+                            </button>
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+                            <p class="parrafo text-azul mb-2 text-center">
+                                <br aria-hidden="true">
+                                Gerardo Contreras Vega
+                            </p>
+
+                            <p class="parrafo text-center mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#methods-3">
+                                + Info
+                                <span id="ident14" class="identificador2 btn_fuente">14</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="movil mostrar">
+                    <div class="tarjeta-designers p-3">
+                        <div class="mb-4 text-center ">
+                            <img class="content__img_movil" src="./images/SDI-_expertocontenido.png" alt="Support image"
+                                aria-hidden="true" width="25%" height="auto">
+                        </div>
+
+                        <p class="parrafo text-azul mb-2 text-center">
+                            Juan Carlos Pérez Arriaga
+                        </p>
+
+                        <p class="parrafo text-center">
+                            Universidad Veracruzana
+                        </p>
+
+                        <p class="parrafo">PENDIENTE</p>
+                    </div>
+
+                    <div class="tarjeta-designers p-3 mt-3">
+
+                        <div class="mb-4 text-center">
+                            <img class="content__img_movil" src="./images/SDI-_expertocontenido.png" alt="Support image"
+                                aria-hidden="true" width="25%" height="auto">
+                        </div>
+
+                        <p class="parrafo text-azul mb-2 text-center">
+                            Marbella Crystal Velasco Hernández
+                        </p>
+
+                        <p class="parrafo text-center">
+                            Universidad Veracruzana
+                        </p>
+
+                        <p class="parrafo">
+                            PENDIENTE
+                        </p>
+
+                    </div>
+
+                    <div class="tarjeta-designers p-3 mt-3">
+
+                        <div class="mb-4 text-center">
+                            <img class="content__img_movil" src="./images/SDI-_expertocontenido.png" alt="Support image"
+                                aria-hidden="true" width="25%" height="auto">
+                        </div>
+
+                        <p class="parrafo text-azul mb-2 text-center">
+                            Gerardo Contreras Vega
+                        </p>
+
+                        <p class="parrafo text-center">
+                            Universidad Veracruzana
+                        </p>
+
+                        <p class="parrafo">
+                            PENDIENTE
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="ident1_16" class="section-bibliography">
+
+            <div class="container py-5">
+
+                <div class="padding__escritorio padding__movil">
+
+                    <h2 class="parrafo text-azul subtitulost text__color ">
+                        Fuentes de información
+                        <span id="ident16" class="identificador2">16</span>
+                    </h2>
+
+                    <!-- </div> -->
+
+                    <div class="escritorio mt-5 mb-5 ocultar ">
+                        <div class="colapsador ">
+
+                            <button data-toggle="collapse" id="basicas-1" data-target="#basicas-1"
+                                class="btn btn-colapsar referencias-index waves-effect waves-light collapsed"
+                                aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">
+                                        Generales
+                                        <span id="ident17" class="identificador2 btn_fuente">17</span>
+                                        <!-- <span id="ident14" class="identificador2">14</span> -->
+                                    </span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+
+                            <div id="basicas-1" class="collapse">
+
+                                <div class="colapsar-contenido">
+
+                                    <div class="texto-referencias ">
+
+
+                                        <p class="parrafo">Comisión de Política Gubernamental en Materia de Derechos
+                                            Humanos. (s.f.). Glosario de Términos sobre Discapacidad. Consultado el 10
+                                            de noviembre de 2023 en
+                                            <a href="https://www.gob.mx/cms/uploads/attachment/file/9638/glosario_terminos_sobre_discapacidad.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.gob.mx/<wbr>cms/uploads/<wbr>attachment/<wbr><wbr>file/9638/<wbr>glosario_<wbr>terminos_<wbr>sobre_discapacidad<wbr>.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Congreso General de los Estados Unidos Mexicanos. (2023). Ley
+                                            General para la Inclusión de las Personas con Discapacidad. Diario Oficial
+                                            de la Federación. Última reforma publicada 06-01-2023. Consultado el 11 de
+                                            septiembre de 2023 en
+                                            <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGIPD.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.diputados<wbr>.gob.mx/<wbr>LeyesBiblio/<wbr>pdf/<wbr>LGIPD.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Instituto Nacional de Estadística y Geografía. (2014). <i>La
+                                                discapacidad en México, datos al 2014</i>. INEGI. p. 358.</p>
+
+                                        <p class="parrafo">Instituto Nacional de Estadística y Geografía. (2021).
+                                            Estadística a propósito del día internacional de las personas con
+                                            discapacidad (Datos nacionales). Comunicado de prensa Núm. 713/21. 3 de
+                                            diciembre de 2021. INEGI. p. 5.</p>
+
+                                        <p class="parrafo">Instituto Politécnico Nacional. (s.f.). Glosario de Términos.
+                                            Dirección de Educación Virtual. IPN. Consultado el 10 de noviembre de 2023
+                                            en
+                                            <a href="https://www.ipn.mx/assets/files/dev/docs/DII/Glosario-RDD.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.ipn.mx/<wbr>assets/<wbr>files/dev/<wbr>docs/DII/<wbr>Glosario-RDD.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Lobato Zapata, Gerardo y Cortés Santamaría, Adarely (2021).
+                                            Propuesta Espacios para Unidad de Accesibilidad Tecnológica. <span
+                                                aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. p. 46.
+                                        </p>
+
+                                        <p class="parrafo">Organización Mundial de Salud. (2001). Clasificación
+                                            Internacional del Funcionamiento, de la Discapacidad y de la Salud. OMS.
+                                            Consultado el 10 de noviembre de 2023 en
+                                            <a href="https://iris.who.int/bitstream/handle/10665/43360/9241545445_spa.pdf"
+                                                target="_blank">
+                                                https://<wbr>iris.who.int<wbr>/bitstream/<wbr>handle/10665<wbr>/43360/<wbr>9241545445_spa.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Revista Suprema. (s.f.). La importancia de la accesibilidad
+                                            en la Era Digital. Consultado el 10 de noviembre de 2023 en
+                                            <a href="https://revistasuprema.com/la-importancia-de-la-accesibilidad-en-la-era-digital"
+                                                target="_blank">
+                                                https://<wbr>revistasuprema.<wbr>com/la-<wbr>importancia-de<wbr>-la-accesibilidad<wbr>-en-la-era<wbr>-digital
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Universidad Nacional Autónoma de México. (s.f.) Glosario de
+                                            Términos de TIC. Dirección General de Cómputo y de Tecnologías de
+                                            Información y Comunicación. Consultado el 10 de noviembre de 2023 en
+                                            <a href="https://www.red-tic.unam.mx/glosario" target="_blank">
+                                                https://<wbr>www.red-tic.<wbr>unam.mx/<wbr>glosario
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Universidad Veracruzana. (2018). Universidad Inclusiva.
+                                            Lineamientos para la inclusión de estudiantes con discapacidad. <span
+                                                aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. Recuperado de
+                                            <a href="https://libros.uv.mx/index.php/UV/catalog/book/UC012"
+                                                target="_blank">
+                                                https://<wbr>libros.uv.mx<wbr>/index.php<wbr>/UV/catalog/<wbr>book/UC012
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Universidad Veracruzana. (2021). Reglamento para la inclusión
+                                            de personas con discapacidad. <span aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. recuperado de
+                                            <a href="https://www.uv.mx/legislacion/files/2021/06/Reglamento-Inclusion-Personas-Discapacidad.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>legislacion/<wbr>files/2021/<wbr>06/Reglamento<wbr>-Inclusion-<wbr>Personas<wbr>-Discapacidad.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo mb-0">Universidad Veracruzana. (2022). Plan de apoyos a
+                                            población estudiantil en condiciones de vulnerabilidad. <span
+                                                aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. Recuperado de
+                                            <a href="https://www.uv.mx/sdi/files/2022/09/Plan-de-apoyos.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>sdi/files/<wbr>2022/09/<wbr>Plan-de-apoyos.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="colapsador ">
+                            <button data-toggle="collapse" data-target="#basicas-2" id="basicas-2"
+                                class="btn btn-colapsar referencias-index waves-effect waves-light collapsed"
+                                aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Tema 1
+                                        <span id="ident18" class="identificador2">18</span>
+                                    </span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+
+                            <div id="basicas-2" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <div class="texto-referencias ">
+
+
+                                        <p class="parrafo">Cáceres Rodríguez, C. (2020). Sobre el concepto de
+                                            discapacidad. Una revisión de las propuestas de la OMS. <i lang="en">SPANISH
+                                                JOURNAL OF AUDIOLOGY</i>, 1577-3108.</p>
+
+                                        <p class="parrafo">España, D. O. (3 de noviembre de 2015). <i lang="en">ZOOM
+                                                TEXT</i>; <i>UN PROGRAMA PARA DISCAPACIDAD VISUAL</i>. Obtenido de
+                                            <a href="https://asociaciondoce.com/2015/11/03/zoom-text-un-programa-para-la-discapacidad-visual/"
+                                                target="_blank">
+                                                https://<wbr>asociaciondoce<wbr>.com/2015/<wbr>11/03/<wbr>zoom-text-<wbr>un-programa-para<wbr>-la-discapacidad-visual/
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Gobierno de España. (2013). <i>Real Decreto Legislativo
+                                                1/2013, de 29 de noviembre, por el que se aprueba el Texto Refundido de
+                                                la Ley General de derechos de las personas con discapacidad y de su
+                                                inclusión social</i>.</p>
+
+                                        <p class="parrafo">ISO/IEC 40500. (2012). <i>ISO/IEC 40500:2012—</i><i
+                                                lang="en">Information technology—W3C Web Content Accessibility
+                                                Guidelines</i><i> (WCAG) 2.0. ISO.</i>
+                                            <a href="https://n9.cl/5yviv8/" target="_blank">
+                                                https://<wbr>n9.cl/5yviv8/
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Lujan, M. (2024). <i>Universidad de Alicante</i>. Obtenido de
+                                            ¿Qué es WCAG?:
+                                            <a href="https://accesibilidadweb.dlsi.ua.es/?menu=que-es-wcag"
+                                                target="_blank">
+                                                https://<wbr>accesibilidadweb<wbr>.dlsi.ua.es/<wbr>?menu=que-es-wcag
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Lujan, M. (s.f.). Introducción a la accesibilidad web. 77.
+                                        </p>
+
+                                        <p class="parrafo">Plataforma Educativa Virtual Accesible. (2023). <i>Diseño y
+                                                gestión de una <span aria-hidden="true">UAT</span> <span
+                                                    class="sr-only">U A T</span> en Instituciones de Educación Superior.
+                                            </i>
+                                            <a href="https://pevae.edutech-project.org/pevae/curso1.html"
+                                                target="_blank">
+                                                https://<wbr>pevae.edutech<wbr>-project.org/<wbr>pevae/curso1<wbr>.html
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo"><span lang="en">SafetyCulture</span>. (2 de enero de 2024).
+                                            <i>¿Qué son los cursos y las clases?</i> Obtenido de <span
+                                                lang="en">SafetyCulture</span>:
+                                            <a href="https://help.safetyculture.com/es/003504/" target="_blank">
+                                                https://<wbr>help.safetyculture<wbr>.com/es/003504/
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Tafur Peral, A. D. (s.f.). Pautas básicas para hacer
+                                            documentos accesibles.</p>
+
+                                        <p class="parrafo mb-0">w3c_wai. (2016, mayo 6). <i lang="en">Accessibility,
+                                                Usability, and Inclusion. Web Accessibility Initiative.</i> </p>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- </div> -->
+
+                    <div class="movil mt-4 mb-5 mostrar">
+
+                        <p class="parrafo instruccion-color-verde">
+                            <span class="font-weight-bold">Instrucciones: </span> Haz clic en el botón para descargar la
+                            información.
+                        </p>
+
+                        <div class="text-right mt-4">
+                            <a href="#" download="" class="btn btn-referencias border rounded waves-effect waves-light"
+                                download="">
+                                Referencias
+                                <span class="parrafo sr-only">PDF file</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer" style="position: relative;">
+
+        <span id="btnVolver_Arriba" type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true"
+            aria-label="Volver arriba">
+            <i class="fa fa-angle-up" aria-hidden="true">
+                <!-- <span id="ident17" class="identificador2 btn_fuente">17</span> -->
+            </i>
+        </span>
+
+        <div class="escritorio">
+            <div class="tamaño_Img_Footer">
+                <img class="tamaño__img ocultar" src="./images/SDI-_firmauv-e.png" loading="lazy" width="100%"
+                    height="auto" alt="Logo de la Universidad Veracruzana">
+            </div>
+            <div>
+                <img class="mostrar" src="./images/SDI-_firmauv-r.png" alt="Banner Principal" aria-hidden="true"
+                    width="100%" height="auto">
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <div class="overlay"></div>
+
+    <!-- role="dialog"  -->
+    <div class="modal fade" id="methods-uno" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span id="closed" aria-hidden="true">×</span>
+                        <span id="ident1_1" class="identificador2 btn_fuente">11</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Juan Carlos Pérez Arriaga
+                            </p>
+                        </div>
+
+                        <p class="parrafo">PENDIENTE
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">
+                        Cerrar
+                        <span id="ident11" class="identificador2 btn_fuente">11</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="methods-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header position-modal">
+                    <button type="button" class="btn-cerrar-modal" role="dialog" data-dismiss="modal"
+                        aria-label="cerrar">
+                        <span aria-hidden="true">×</span>
+                        <span id="ident1_2" class="identificador2 btn_fuente">13</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <p class="parrafo text-azul">
+                                Marbella Crystal Velasco Hernández
+                            </p>
+
+                        </div>
+
+
+                        <p class="parrafo">
+                            PENDIENTE
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">
+                        Cerrar
+                        <span id="ident13" class="identificador2 btn_fuente">13</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- role="dialog"  -->
+    <div class="modal fade" id="methods-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                        <span id="ident15" class="identificador2 btn_fuente">15</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Gerardo Contreras Vega
+                            </p>
+                        </div>
+
+                        <p class="parrafo">PENDIENTE
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">
+                        Cerrar
+                        <span id="ident15_3" class="identificador2 btn_fuente">15</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-backdrop"></div>
+
+    <div class="modal fade" id="information-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Close"
+                        accesskey="X">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center mb-3">
+
+                            <p class="parrafo mt-4">
+                                <strong>Información de ayuda</strong>
+                            </p>
+
+                        </div>
+
+                        <p class="parrafo">
+                            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos
+                            como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+                        </p>
+
+                        <p class="parrafo mb-0"><b>Windows</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Alt + M</li>
+                            <li>Cerrar menú principal Alt + C</li>
+                        </ul>
+
+                        <p class="parrafo mb-0"><b>MacOS</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Option + M</li>
+                            <li>Cerrar menú principal Option + C</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <!-- Funcionalidad general -->
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+    <script src="scripts/annyang.js"></script>
+    <script src="scripts/menuacces.js"></script>
+
+    <!-- Funcionalidad para Progress-bar-scroll del inicio -->
+    <script src="scripts/scroll-timeline.js"></script>
+
+    <script>
+
+        // Create ScrollTimeline
+        const myScrollTimeline = new ScrollTimeline({
+            source: document.scrollingElement,
+            scrollSource: document.scrollingElement, // For legacy implementations
+            orientation: 'block',
+            scrollOffsets: [
+                new CSSUnitValue(0, 'percent'),
+                new CSSUnitValue(100, 'percent'),
+            ],
+        });
+
+        // Animate Progress Bar on Scroll
+        new Animation(
+            new KeyframeEffect(
+                document.querySelector('#progress'),
+                {
+                    transform: ['scaleX(0)', 'scaleX(1)'],
+                },
+                { duration: 1, fill: "forwards" }
+            ),
+            myScrollTimeline
+        ).play();
+
+    </script>
+    <!--  -->
+
+    <!-- IR ARRIBA -->
+    <script>
+
+        $(document).ready(function () {
+
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.ir-arriba').slideDown(300);
+                } else {
+                    $('.ir-arriba').slideUp(300);
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

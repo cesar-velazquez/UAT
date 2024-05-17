@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Tema 1. Conceptos básicos</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet" />
+
+
+    <!-- Estilos propios -->
+    <!-- <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/unit1.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/unit1.css" />
+    <link rel="stylesheet" href="css/tabs.css">
+
+    <!-- Libreria para animar  los recursos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+    <!-- Instrucción para información de ayuda -->
+    <div>
+        <p class="sr-only" lang="es">Instrucción: Antes de iniciar debes acceder a la información de ayuda y conocer los atajos de este módulo. Para conocerlos tienes que apretar el comando de las teclas Alt + I </p>
+    </div>
+
+    <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="I">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </button>
+
+    <!-- Barra de progreso en la parte superior -->
+    <div id="progress"></div>
+
+    <!-- SIDEBAR MENÚ -->
+    <navbar class="sidebar" style="overflow-y: scroll">
+        <div class="sidebar__encabezado">
+            <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
+                <span>X</span>
+            </button>
+        </div>
+
+        <menu-component-2></menu-component-2>
+    </navbar>
+
+    <!-- PLECA Y TITULO -->
+    <header class="banner-1">
+        <div class="escritorio">
+            <div class="js-pleca pleca">
+                <a class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad Veracruzana</a>
+
+                <div class="dropdown">
+                    <button class="btn btn-menu js-sidebar__collapse" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="M">
+                        <span class="font-weight-bold">MENÚ&nbsp;&nbsp;</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="pleca__ee container ml-0" style="display: none">
+                    <span class="text-left">
+                        <p class="tam-font font-weight-bold mb-3 texto-tema-margen">
+                            <b>Tema 1. Conceptos básicos</b>
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <img class="ocultar" src="./images/SDI-_banner-pagint-e.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+
+            <img class="mostrar" src="./images/SDI-_banner-pagint-r.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+        </div>
+
+        <div class="container titulo-principal-unit">
+            <!-- titulo-principal-unit margin-left-titulo -->
+            <div class="padding__escritorio ">
+                <h1 class=" padding__movil container__titulo  margin-left-titulo
+                font-weight-bold top_h1 ">
+                    Tema 1. Conceptos básicos<br />
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Codigo principal -->
+    <main>
+        <!-- introduction -->
+        <section class="">
+            <!-- py-4 -->
+            <div class="container  ">
+                <!-- mt-4 mt-md-5 presentacion
+                py-5 padding__escritorio padding__movil presentacion -->
+                <div class="mb-4 mb-md-5 presentacion padding__escritorio padding__movil">
+                    <!-- parrafo text-azul subtitulos -->
+                    <h2 class="parrafop text-azul subtitulos text__color font-weight-bold">Introducción</h2>
+
+                    <p class="presentacionig ">
+                        La comprensión de los conceptos básicos relacionados con la accesibilidad y la tecnología es fundamental para garantizar un entorno educativo inclusivo. En el tema 1 se abordan los conceptos esenciales que sientan las bases para una operación efectiva de las Unidades de Accesibilidad Tecnológica (UAT). En este tema, se exploran diversos conceptos relacionados con la accesibilidad, a fin de comprender la importancia de adoptar un enfoque inclusivo en el entorno educativo.
+                    </p>
+                </div>
+
+                <hr class="separador" aria-hidden="true" >
+
+                
+
+                <!-- PRUEBA FIN -->
+
+                <!-- Inicia Pestañas -->
+                <!-- mb-4 mb-md-5 -->
+                <div class="margin-b-tabs padding__escritorio padding__movil ocultar">
+                    <h2 class="parrafop text-azul subtitulos">Contenido</h2>
+
+                    <ul class="parrafo">
+                        <li>Discapacidad</li>
+                        <li>Tecnología de asistencia</li>
+                        <li>Tiflotecnología</li>
+                        <li>Accesibilidad</li>
+                            <ul>
+                                <li>Ajustes razonables</li>
+                                <li>Guías para contenido accesible</li>
+                            </ul>
+                        <li>Opciones de Accesibilidad en sistemas operativos</li>
+                    </ul>
+                </div>
+
+                <!-- INICIA PESTAÑAS MOVIL -->
+                
+
+                <hr class="separador" aria-hidden="true" >
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Discapacidad
+                    </h2>
+                    
+                    <p>Una discapacidad es una afección del cuerpo o la mente (deficiencia) que hace más difícil que la persona haga ciertas actividades (limitación a la actividad) e interactúe con el mundo que la rodea (restricciones a la participación).</p>
+
+                    Discapacidad física abarca limitaciones tanto en la movilidad como en la funcionalidad de los sistemas corporales, lo que afecta la participación en actividades diarias.
+
+Discapacidad motora se refiere a dificultades en el movimiento debido a problemas neuromusculares o esqueléticos.
+
+Discapacidad orgánica afecta a procesos fisiológicos o a órganos internos, tales como el sistema digestivo, metabólico o respiratorio.
+
+Discapacidad mental se relaciona con alteraciones en la conducta adaptativa y en las facultades mentales, mientras que la discapacidad intelectual implica un funcionamiento intelectual por debajo de lo normal, dificultando la comprensión y respuesta a situaciones cotidianas.
+
+La discapacidad sensorial afecta a los sentidos como la audición, la vista o el tacto, entre otros.
+
+Pluridiscapacidad se presenta cuando una persona combina varios tipos de discapacidad, incluyendo problemas en el desarrollo psicomotriz y sensorial, así como otros problemas de salud (Gil, 2021).
+                </div>
+
+                <hr class="separador" aria-hidden="true" >
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Tecnología de asistencia
+                    </h2>
+                    <p class="parrafo">La tecnología de asistencia abarca desde dispositivos simples como lupas hasta sistemas complejos de comunicación computarizados, pudiendo ser hechos a mano, comprados de fábrica o adaptados de productos existentes (Hess & Gutiérrez, 2018).</p>
+
+                </div>
+
+                <hr class="separador" aria-hidden="true" >
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Tiflotecnología
+                    </h2>
+
+                    <p class="parrafo">La tiflotecnología busca mejorar la vida de personas con discapacidad visual mediante herramientas tecnológicas, abarcando el estudio y recursos para promover su inclusión social (Martínez, Naranjo, Torres & Castro, 2022).</p>
+
+                    <div class="escritorio ocultar">
+
+                    <p class="parrafo instruccion-color-verde mb-4"><b>Instrucción:</b> Presiona cada concepto para conocer su información.</p>
+
+                    <div class="d-flex justify-content-center" style="gap: 1em;">
+
+                        <div class="tarjeta-designers p-3 text-center ">
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#methods-1">
+                                Tiflotecnología
+                            </button>
+                        </div>
+
+                        <p class="parrafo">Sistemas tiflotecnologías</p>
+
+                        <div class="tarjeta-designers p-3 text-center ">
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#methods-2">
+                                Sistemas autónomos
+                            </button>
+                        </div>
+
+                        <div class="tarjeta-designers p-3 text-center">
+                            
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#methods-3">
+                                Sistemas de acceso a la computadora
+                            </button>
+                        </div>
+
+                        <div class="tarjeta-designers p-3 text-center">
+
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#methods-4">
+                                Sistemas periféricos específicos
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="movil mostrar">
+                    <div class="tarjeta-designers p-3">
+                        <div class="mb-4 text-center ">
+                            <img class="content__img_movil" src="./images/SDI-_expertocontenido.png" alt="Support image"
+                                aria-hidden="true" width="25%" height="auto">
+                        </div>
+
+                        <p class="parrafo text-azul mb-2 text-center">
+                            Tiflotecnología
+                        </p>
+
+                        <p class="parrafo">La tiflotecnología se centra en la utilización de herramientas tecnológicas por parte de personas con discapacidad visual para mejorar su calidad de vida. Este término deriva de la palabra griega "<i lang="la">tiflos</i>", que significa "ciego", y "tecnología", que se compone de "<i lang="la">tekhne</i>" (arte, técnica u oficio) y "-logia" (estudio, tratado o ciencia). Así, la tiflotecnología abarca el estudio, los recursos y las técnicas relacionadas con el uso de tecnología para estas personas, con el fin de aprovechar sus habilidades y promover su inclusión social (Martínez, Naranjo, Torres & Castro, 2022).</p>
+
+                    </div>
+
+                    <p class="parrafo">Sistemas tiflotecnologías</p>
+
+                    <div class="tarjeta-designers p-3">
+                        <div class="mb-4 text-center ">
+                            <img class="content__img_movil" src="./images/SDI-_expertocontenido.png" alt="Support image"
+                                aria-hidden="true" width="25%" height="auto">
+                        </div>
+
+                        <p class="parrafo text-azul mb-2 text-center">
+                            Sistemas autónomos
+                        </p>
+
+                        <p class="parrafo">Estos sistemas tienen capacidades propias para llevar a cabo ciertas funciones, aunque en su mayoría pueden conectarse a una computadora para realizar otras actividades adicionales. Estos sistemas se dividen en visuales, táctiles y auditivos.</p>
+
+                    </div>
+
+                    <div class="tarjeta-designers p-3 mt-3">
+
+                        <div class="mb-4 text-center">
+                            <img class="content__img_movil" src="./images/SDI-_expertocontenido.png" alt="Support image"
+                                aria-hidden="true" width="25%" height="auto">
+                        </div>
+
+                        <p class="parrafo text-azul mb-2 text-center">
+                            Sistemas de acceso a la computadora
+                        </p>
+
+                        <p class="parrafo">
+                            Se trata de adaptaciones diseñadas para computadoras personales (PC). Se distinguen según el sistema sensorial utilizado: visual, táctil y auditivo.
+                        </p>
+
+                    </div>
+
+                    <div class="tarjeta-designers p-3 mt-3">
+
+                        <div class="mb-4 text-center">
+                            <img class="content__img_movil" src="./images/SDI-_expertocontenido.png" alt="Support image"
+                                aria-hidden="true" width="25%" height="auto">
+                        </div>
+
+                        <p class="parrafo text-azul mb-2 text-center">
+                            Sistemas periféricos específicos
+                        </p>
+
+                        <p class="parrafo mb-0">En el ámbito educativo y social, se pueden identificar dos categorías principales de tecnologías y dispositivos destinados a personas con discapacidad visual:</p>
+                        <ul class="parrafo ml-4">
+                            <li>Para personas con restos visuales.</li>
+                            <li>Para invidentes totales (Martínez, Naranjo, Torres & Castro, 2022).</li>                            
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                </div>
+
+                <hr class="separador" aria-hidden="true" >
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Accesibilidad
+                    </h2>
+
+                    <p class="parrafo">La accesibilidad permite que cualquier persona utilice un entorno u objeto de manera amigable y segura, según la Organización Internacional de Normalización, adaptándose a diversas características, habilidades y necesidades de los usuarios (ANUIES, 2020).</p>
+
+                    <p class="parrafo">Presiona los botones para conocer la información.</p>
+
+                    <div class="escritorio">                    
+
+                        <p class="parrafo instruccion-color-verde mt-4 mb-4_5" aria-hidden="true">
+                            <b>Instrucción:</b> Haz clic en cada botón para leer la información.
+                        </p>
+                        
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">
+
+                                    <div class="swiper-content">
+
+                                        <p class="parrafo">
+                                            La <b>accesibilidad</b> es la característica de un entorno u objeto que permite a cualquier persona relacionarse con él, así como utilizarlo de forma amigable, respetuosa y segura.
+                                        </p>    
+
+                                        <p class="parrafo mb-0">
+                                            La Organización Internacional de Normalización, define <b>accesibilidad</b> como la medida en que un sistema, producto, servicio, entorno o instalaciones puedan ser utilizados por la mayor cantidad de usuarios disponibles, sin importar sus características, habilidades y necesidades; al mismo tiempo que les permita cumplir con el objetivo específico para el cual fue diseñado (ANUIES, 2020).
+                                        </p>
+
+                                        <p class="parrafo text-grey mb-0" aria-hidden="true">1 / 3</p>
+
+                                    </div>
+
+                                </div>
+                
+                                <div class="swiper-slide">
+
+                                    <div class="swiper-content">
+
+                                        <p class="parrafo mb-0">
+                                            Por otra parte, la <b>tecnología accesible</b> es aquella que se diseña para adaptarse a las necesidades del usuario, sin requerir de hacer uso de la tecnología de asistencia o apoyo de terceros. Este tipo de tecnología puede ser denominada también como <b>tecnología asistiva</b>, o en algunos casos donde la tecnología se enfoca en una discapacidad, por ejemplo, la discapacidad visual, puede tener nombres técnicos como <b>tiflotecnología</b> (Aparecida, 2018).
+                                        </p>
+
+                                        <p class="parrafo text-grey mb-0" aria-hidden="true">2 / 3</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-slide">
+
+                                    <div class="swiper-content">
+                                        <p class="parrafo mb-0">
+                                            De acuerdo con datos de la Organización Mundial de la Salud, durante el 2021, el 15% de la población mundial contaba con algún tipo de discapacidad. Además, entre 110 millones y 190 millones de personas, lo que equivale a una quinta parte de la población mundial, se ven afectadas por distintos tipos de discapacidad (ONU, 2021). Es por ello, que se debe hacer énfasis en la importancia de la accesibilidad tecnológica para brindar acceso a toda la población, sin importar el tipo de capacidad con que los usuarios cuenten.
+                                        </p>    
+                                        
+                                        <p class="parrafo text-grey mb-0" aria-hidden="true">3 / 3</p>
+
+                                    </div>
+
+                                </div>
+                
+                            </div>
+
+                            <div class="contenedor-botones" aria-hidden="true">                                
+                                <div class="swiper-button-prev" aria-hidden="true"><p class="parrafo mb-0">Anterior</p></div>
+                                <div class="swiper-button-next"><p class="parrafo mb-0">Siguiente</p></div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="movil mt-4 mb-4">
+
+                        <div class="ambientes-aprendizaje">
+                            <p class="parrafo">
+                                La <b>accesibilidad</b> es la característica de un entorno u objeto que permite a cualquier persona relacionarse con él, así como utilizarlo de forma amigable, respetuosa y segura.
+                            </p>    
+
+                            <p class="parrafo mb-0">
+                                La Organización Internacional de Normalización, define <b>accesibilidad</b> como la medida en que un sistema, producto, servicio, entorno o instalaciones puedan ser utilizados por la mayor cantidad de usuarios disponibles, sin importar sus características, habilidades y necesidades; al mismo tiempo que les permita cumplir con el objetivo específico para el cual fue diseñado (ANUIES, 2020).
+                            </p>
+                            
+                        </div>
+
+                        <div class="ambientes-aprendizaje mt-4">
+                            <p class="parrafo mb-0">
+                                Por otra parte, la <b>tecnología accesible</b> es aquella que se diseña para adaptarse a las necesidades del usuario, sin requerir de hacer uso de la tecnología de asistencia o apoyo de terceros. Este tipo de tecnología puede ser denominada también como <b>tecnología asistiva</b>, o en algunos casos donde la tecnología se enfoca en una discapacidad, por ejemplo, la discapacidad visual, puede tener nombres técnicos como <b>tiflotecnología</b> (Aparecida, 2018).
+                            </p>
+                            
+                        </div>
+
+                        <div class="ambientes-aprendizaje mt-4">
+                            <p class="parrafo mb-0">
+                                De acuerdo con datos de la Organización Mundial de la Salud, durante el 2021, el 15% de la población mundial contaba con algún tipo de discapacidad. Además, entre 110 millones y 190 millones de personas, lo que equivale a una quinta parte de la población mundial, se ven afectadas por distintos tipos de discapacidad (ONU, 2021). Es por ello, que se debe hacer énfasis en la importancia de la accesibilidad tecnológica para brindar acceso a toda la población, sin importar el tipo de capacidad con que los usuarios cuenten.
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Ajustes razonables
+                    </h2>
+
+                    <p class="parrafo">“Ajustes razonables: son las modificaciones y adaptaciones necesarias y adecuadas del ambiente físico, social y actitudinal a las necesidades específicas de las personas con discapacidad que no impongan una carga desproporcionada o indebida, cuando se requieran en un caso particular de manera eficaz y práctica, para facilitar la accesibilidad y la participación y para garantizar a las personas con discapacidad el goce o ejercicio, en igualdad de condiciones con las demás, de todos los derechos” (Gobierno de España, 2013, p. 11).</p>
+
+                    <p class="parrafo">Si bien los ajustes razonables son muy variados, el estudio realizado por Sandoval, Morgado & Doménech (2020) sintetiza el siguiente conjunto de ajustes razonables en la práctica.</p>
+
+                    <div class="escritorio">
+
+                        <p class="parrafo instruccion-color-verde mt-4 mb-4_5" aria-hidden="true">
+                            <b>Instrucción:</b> Presiona cada botón para conocer la información.
+                        </p>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Modificar la actitud y la manera en la que se interactúa con los estudiantes</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <p class="parrafo mb-0">
+                                        <b>Modificar la actitud y la manera en la que se interactúa con los estudiantes</b>
+                                    </p>
+
+                                    <p class="parrafo mb-0">Una actitud amigable y flexible puede fomentar la empatía y mejorar la comunicación, derivando en la apertura de los estudiantes para indicar sus necesidades y disposición del profesor para atenderlas en el rango de lo posible. La tutoría es una estrategia muy adecuada para lograr esta cercanía entre estudiante y profesor.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-2" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Ofrecer a los estudiantes varias alternativas de evaluación</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-2" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <p class="parrafo mb-0">
+                                        <b>Ofrecer a los estudiantes varias alternativas de evaluación, siempre manteniendo los estándares académicos</b></p>
+                                    <p class="parrafo mb-0">
+                                        Por ejemplo, modificar el formato de los exámenes (tamaño de fuente, lenguaje, etc.), otorgar más tiempo para resolver el examen, permitir el uso de la computadora para resolver el examen, presentar el examen en un lugar tranquilo y sin interrupciones (por ejemplo, el despacho del profesor), presentar exámenes orales, cambiar fechas de entrega de trabajos o presentación de exámenes, permitir que los estudiantes vayan al baño o tengan un receso durante el examen, y presentar exámenes más cortos. Los estudiantes podrían seleccionar la opción más adecuada para ellos.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-3" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Organizar espacios físicos y adaptar infraestructura y/o mobiliario de las aulas</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-3" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <p class="parrafo mb-0">
+                                        <b>Organizar espacios físicos y adaptar infraestructura y/o mobiliario de las aulas</b>
+                                    </p>
+                                    <p class="parrafo mb-0">
+                                        En la mayoría de las ocasiones, basta con asegurarse de reservar asientos en la primera fila del salón, dejar espacio suficiente entre asientos y pasillos, y que el profesor imparta su clase en lugares estratégicos (por ejemplo, directamente frente a los estudiantes con discapacidad) con el fin de facilitar la comunicación.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-4" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Ajustar la metodología de enseñanza</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-4" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <p class="parrafo mb-0">
+                                        <b>Ajustar la metodología de enseñanza</b> haciendo accesible toda la información de la materia, permitiendo la grabación de las clases, manteniendo contacto constante por correo electrónico con los estudiantes para asesoría, y proporcionando toda la información y materiales del curso en formato digital (incluso por adelantado).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-5" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Adaptar las guías y materiales de la materia</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-5" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <p class="parrafo mb-0">
+                                        <b>Adaptar las guías y materiales de la materia</b>, por ejemplo, agregar subtítulos a los videos y/o audio, usar tamaños y colores de fuente adecuados, y presentar los materiales en diferentes maneras.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-6" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Implementar estrategias para explicar el contenido de enseñanza de diferentes maneras</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-6" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <p class="parrafo mb-0">
+                                        <b>Implementar estrategias para explicar el contenido de enseñanza de diferentes maneras</b>, tales como, modificar el orden de los temas para facilitar su aprendizaje, y desarrollar actividades de aprendizaje distintas a las propuestas inicialmente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-7" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Utilizar diferentes estrategias o recursos</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-7" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <p class="parrafo mb-0">
+                                        <b>Utilizar diferentes estrategias o recursos</b>, por ejemplo, la asignación del rol de estudiante colaborador a algún estudiante avanzado en la materia para que ayude a estudiantes con discapacidad mediante la toma de notas, la utilización de artefactos que ayuden a resaltar algún concepto específico de la materia, el uso de recursos tecnológicos, y el fomento del trabajo en grupo (Plataforma Educativa Virtual Accesible, 2023).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="movil">
+                        <div>
+                                <p class="parrafo mb-0">
+                                    <b>Modificar la actitud y la manera en la que se interactúa con los estudiantes</b>
+                                </p>
+
+                                <p class="parrafo mb-0">Una actitud amigable y flexible puede fomentar la empatía y mejorar la comunicación, derivando en la apertura de los estudiantes para indicar sus necesidades y disposición del profesor para atenderlas en el rango de lo posible. La tutoría es una estrategia muy adecuada para lograr esta cercanía entre estudiante y profesor.
+
+                                </p>
+                            
+                        </div>
+                        <div>
+                                <p class="parrafo mb-0">
+                                    <b>Ofrecer a los estudiantes varias alternativas de evaluación, siempre manteniendo los estándares académicos</b></p>
+                                <p class="parrafo mb-0">
+                                    Por ejemplo, modificar el formato de los exámenes (tamaño de fuente, lenguaje, etc.), otorgar más tiempo para resolver el examen, permitir el uso de la computadora para resolver el examen, presentar el examen en un lugar tranquilo y sin interrupciones (por ejemplo, el despacho del profesor), presentar exámenes orales, cambiar fechas de entrega de trabajos o presentación de exámenes, permitir que los estudiantes vayan al baño o tengan un receso durante el examen, y presentar exámenes más cortos. Los estudiantes podrían seleccionar la opción más adecuada para ellos.
+
+                                </p>
+                        
+                        </div>
+                        <div>
+                                <p class="parrafo mb-0">
+                                    <b>Organizar espacios físicos y adaptar infraestructura y/o mobiliario de las aulas</b>
+                                </p>
+                                <p class="parrafo mb-0">
+                                    En la mayoría de las ocasiones, basta con asegurarse de reservar asientos en la primera fila del salón, dejar espacio suficiente entre asientos y pasillos, y que el profesor imparta su clase en lugares estratégicos (por ejemplo, directamente frente a los estudiantes con discapacidad) con el fin de facilitar la comunicación.
+                                </p>
+                        </div>
+                        <div>
+                                <p class="parrafo mb-0">
+                                    <b>Ajustar la metodología de enseñanza</b> haciendo accesible toda la información de la materia, permitiendo la grabación de las clases, manteniendo contacto constante por correo electrónico con los estudiantes para asesoría, y proporcionando toda la información y materiales del curso en formato digital (incluso por adelantado).
+                                </p>
+                        </div>
+                        <div>
+                                <p class="parrafo mb-0">
+                                    <b>Adaptar las guías y materiales de la materia</b>, por ejemplo, agregar subtítulos a los videos y/o audio, usar tamaños y colores de fuente adecuados, y presentar los materiales en diferentes maneras.
+                                </p>
+                        </div>
+                        <div>
+                                <p class="parrafo mb-0">
+                                    <b>Implementar estrategias para explicar el contenido de enseñanza de diferentes maneras</b>, tales como, modificar el orden de los temas para facilitar su aprendizaje, y desarrollar actividades de aprendizaje distintas a las propuestas inicialmente.
+                                </p>
+                        </div>
+                        <div>
+                                <p class="parrafo mb-0">
+                                    <b>Utilizar diferentes estrategias o recursos</b>, por ejemplo, la asignación del rol de estudiante colaborador a algún estudiante avanzado en la materia para que ayude a estudiantes con discapacidad mediante la toma de notas, la utilización de artefactos que ayuden a resaltar algún concepto específico de la materia, el uso de recursos tecnológicos, y el fomento del trabajo en grupo (Plataforma Educativa Virtual Accesible, 2023).
+                                </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Recomendaciones para contenido accesible
+                    </h2>
+
+                    <p class="parrafo">El World Wilde Web Consortium establece los estándares a cumplir para que cualquier contenido o página web sea accesible. Entre los diferentes estándares de accesibilidad se encuentra las pautas de accesibilidad al contenido (WCAG, por sus siglas en inglés) las cuales explican cómo hacer para que el contenido web sea accesible e incluyen adaptaciones para usuarios con ceguera y baja visión, sordera y pérdida auditiva, movimiento limitado, discapacidades del habla, fotosensibilidad y combinaciones de éstas, y algunas adaptaciones para discapacidades de aprendizaje y limitaciones cognitivas (w3c_wai, 2016, mayo 6).</p>
+
+                    <p class="parrafo">Entre las recomendaciones mencionadas, se proponen las siguientes directrices para tener en cuenta en la creación de contenido accesible.</p>
+
+                    <div class="escritorio">                    
+
+                        <p class="parrafo instruccion-color-verde mt-4 mb-4_5" aria-hidden="true">
+                            <b>Instrucción:</b> Haz clic en cada botón para leer la información.
+                        </p>
+                        
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">
+
+                                    <div class="swiper-content">
+                                        <ul class="parrafo">
+
+                                            <li>1.1 Proporcionar alternativas textuales para todo contenido no textual, de modo que se pueda convertir a otros formatos que las personas necesiten, tales como textos ampliados, braille, voz, símbolos o en un lenguaje más simple.</li>
+
+                                            <li>1.2 Medios basados en el tiempo: proporcionar alternativas para los medios basados en el tiempo.</li>
+
+                                            <li>1.3 Adaptable: crear contenido que pueda presentarse de diferentes maneras (por ejemplo, un diseño más simple) sin perder información ni estructura.</li>
+
+                                            <li>1.4 Distinguible: facilitar a los usuarios ver y oír el contenido, incluyendo la separación entre el primer plano y el fondo.</li>
+                                        </ul>
+
+
+                                        <p class="parrafo text-grey mb-0" aria-hidden="true">1 / 3</p>
+
+                                    </div>
+
+                                </div>
+                
+                                <div class="swiper-slide">
+
+                                    <div class="swiper-content">
+
+                                        <ul class="parrafo">
+                                            <li>2.1 Teclado accesible: hacer que todas las funciones estén disponibles desde un teclado.</li>
+
+                                            <li>2.2 Tiempo suficiente: proporcionar a los usuarios el tiempo suficiente para leer y usar el contenido.</li>
+
+                                            <li>2.3 Convulsiones y reacciones físicas: no diseñar contenido de un modo que se sepa podría provocar convulsiones o reacciones físicas.</li>
+
+                                            <li>2.4 Navegable: proporcionar medios para ayudar a los usuarios a navegar, encontrar contenido y determinar dónde se encuentran.</li>
+                                        </ul>
+
+
+                                        <p class="parrafo text-grey mb-0" aria-hidden="true">2 / 3</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-slide">
+
+                                    <div class="swiper-content">
+                                        <ul class="parrafo">
+                                            <li>3.1 Legible: hacer que los contenidos textuales resulten legibles y comprensibles.</li>
+
+                                            <li>3.2 Previsible: hacer que las páginas web aparezcan y operen de manera predecible.</li>
+
+                                            <li>3.3 Asistencia de entrada: ayudar a los usuarios a evitar y corregir los errores.</li>
+
+                                            <li>4.1 Compatible: maximizar la compatibilidad con las aplicaciones de usuario actuales y futuras, incluyendo tecnología de asistencia.</li>
+                                        </ul>
+                                        
+                                        <p class="parrafo text-grey mb-0" aria-hidden="true">3 / 3</p>
+
+                                    </div>
+
+                                </div>
+                
+                            </div>
+
+                            <div class="contenedor-botones" aria-hidden="true">                                
+                                <div class="swiper-button-prev" aria-hidden="true"><p class="parrafo mb-0">Anterior</p></div>
+                                <div class="swiper-button-next"><p class="parrafo mb-0">Siguiente</p></div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="movil">
+                        <ul class="parrafo">
+                            <li>1.1 Proporcionar alternativas textuales para todo contenido no textual, de modo que se pueda convertir a otros formatos que las personas necesiten, tales como textos ampliados, braille, voz, símbolos o en un lenguaje más simple.</li>
+
+                            <li>1.2 Medios basados en el tiempo: proporcionar alternativas para los medios basados en el tiempo.</li>
+
+                            <li>1.3 Adaptable: crear contenido que pueda presentarse de diferentes maneras (por ejemplo, un diseño más simple) sin perder información ni estructura.</li>
+
+                            <li>1.4 Distinguible: facilitar a los usuarios ver y oír el contenido, incluyendo la separación entre el primer plano y el fondo.</li>
+                        
+                            <li>2.1 Teclado accesible: hacer que todas las funciones estén disponibles desde un teclado.</li>
+
+                            <li>2.2 Tiempo suficiente: proporcionar a los usuarios el tiempo suficiente para leer y usar el contenido.</li>
+
+                            <li>2.3 Convulsiones y reacciones físicas: no diseñar contenido de un modo que se sepa podría provocar convulsiones o reacciones físicas.</li>
+
+                            <li>2.4 Navegable: proporcionar medios para ayudar a los usuarios a navegar, encontrar contenido y determinar dónde se encuentran.</li>
+                        
+                            <li>3.1 Legible: hacer que los contenidos textuales resulten legibles y comprensibles.</li>
+
+                            <li>3.2 Previsible: hacer que las páginas web aparezcan y operen de manera predecible.</li>
+
+                            <li>3.3 Asistencia de entrada: ayudar a los usuarios a evitar y corregir los errores.</li>
+
+                            <li>4.1 Compatible: maximizar la compatibilidad con las aplicaciones de usuario actuales y futuras, incluyendo tecnología de asistencia.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Guías para contenido accesible
+                    </h2>
+
+                    <h2 class="parrafop text-azul subtitulos">
+                        Accesibilidad de documentos
+                    </h2>
+
+                    <p class="parrafo">Lista de consideraciones que permiten la accesibilidad en documentos:</p>
+
+                    <ul class="parrafo ml-4">
+                        <li>Proveer alternativas de texto para contenido que no sea texto (fotos, gráficas, archivos de audio).</li>
+                        <li>Los textos equivalentes deben escribirse de manera que describan la información esencial.</li>
+                    </ul>
+
+                    <div class="escritorio">
+
+                        <p class="presentacionig instruccion-color--verde mt-4"> <b>Instrucción:</b> Presiona cada botón para conocer la información.</p>
+
+                        <ul class="centerPestaña nav nav-tabs tabs-1-nav mt-4">
+
+                            <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
+                                <a data-toggle="tab" href="#ppaso-1"
+                                    class="tamano-btn nav-link tab-1-link active text-center ajuste-altura">
+                                    <span class="tabs-1-texto parrafo mb-0 font-weight-bold">En estructura</span>
+                                </a>
+                            </li>
+
+                            <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
+                                <a data-toggle="tab" href="#ppaso-2"
+                                    class="tamano-btn nav-link tab-1-link text-center ajuste-altura">
+                                    <span class="tabs-1-texto parrafo mb-0 font-weight-bold">En audio y video</span>
+                                </a>
+                            </li>
+
+                            <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
+                                <a data-toggle="tab" href="#ppaso-3"
+                                    class="tamano-btn nav-link tab-1-link text-center ajuste-altura">
+                                    <span class="tabs-1-texto parrafo mb-0 font-weight-bold">Verificación de contrastes</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <div class="tab-content bg-tab-content">
+
+                            <div id="ppaso-1" class="tab-pane container active">
+
+                                <div class="tam-content">
+                                    <div>
+                                        <p class="sr-only">
+                                            Estás en la pestaña de En estructura, continúa bajando para leer la información.
+                                        </p>
+
+                                        <p class="parrafo mb-0"><b>Recomendaciones en estructura</b></p>
+
+                                        <ul class="parrafo ml-4">
+                                            <li>Uso de encabezados.</li>
+                                            <li>Revisar constantemente el “outline” del documento para validar la estructura lógica.</li>
+                                            <li>Cuidar el orden de lectura.</li>
+                                            <li>Evitar el uso de columnas.</li>
+                                        </ul>                                               
+
+                                        <p class="sr-only">
+                                            Terminaste el contenido de la pestaña En estructura, deberás subir y elegir la pestaña siguiente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="ppaso-2" class="tab-pane container">
+
+                                <div class="tam-content">
+                                    <div>
+                                        <p class="sr-only">
+                                            Estás en la pestaña de En audio y video, continúa bajando para leer la información.
+                                        </p>
+
+                                        <p class="parrafo mb-0"><b>Recomendaciones de audio y video</b></p>
+
+                                        <ul class="parrafo ml-4">
+                                            <li>No colocar archivos de video o audio que se reproduzcan automáticamente al iniciar la página o abrir el documento.</li>
+                                            <li>Usuarios con discapacidad visual necesitan información adicional de las imágenes o escenarios que suceden en el video.</li>
+                                            <li>Utilizar subtítulos (<i lang="en">captions</i>) en el video contribuye a la accesibilidad del mismo.</li>
+                                            <li>Utilizar transcripciones (<i lang="en">transcripts</i>) del contenido en el video es útil para las personas con discapacidad visual, ya que la transcripción puede ser transformada a braille.</li>
+                                        </ul>
+
+                                        <p class="sr-only">
+                                            Terminaste el contenido de la pestaña En audio y video, deberás subir y elegir la pestaña siguiente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="ppaso-3" class="tab-pane container">
+                                <div class="tam-content">
+                                    <div>
+                                        <p class="sr-only">
+                                            Estás en la pestaña de Verificación de contraste, continúa bajando para leer la información.
+                                        </p>
+
+                                        <p class="parrafo"><b>Verificación de contrastes</b></p>
+
+                                        <p class="parrafo mb-0">Es importante verificar que los colores utilizados cumplan con los mínimos requeridos:</p>
+
+                                        <ul class="parrafo ml-4">
+                                            <li>Nivel AA: 4.5:1 o 3:1 (texto largo).</li>
+                                            <li>Nivel AAA: 7:1 o 4.5:1.</li>
+                                        </ul>
+
+                                        <p class="parrafo">La herramienta 
+                                            <a target="_blank" href="http://webaim.org/resources/contrastchecker/">
+                                            <i lang="en">Web accesibility in mind (WEbAIM)</i>
+                                            <span class="sr-only">se abre en nueva pestaña</span>
+                                            </a> permite realizar pruebas básicas de contrastes en el contenido de pantalla.</p>
+
+                                        <p class="sr-only">
+                                            Terminaste el contenido de la pestaña Verificación de contraste.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h2 class="parrafop text-azul subtitulos">
+                            Recomendaciones básicas para documentos de texto en formato ODT o DOCX
+                        </h2>
+
+                        <p class="parrafo instruccion-color-verde mt-4 mb-4_5" aria-hidden="true">
+                            <b>Instrucción:</b> Presiona cada botón para conocer la información.
+                        </p>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">1. Acerca del documento en general</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                       <li>a. El archivo se nombra de manera descriptiva, sin espacios ni caracteres especiales.</li>
+                                       <li>b. Se guarda en formato ODT o DOCX.</li>
+                                       <li>c. Se completan las propiedades como "título" y "autor", así como otras disponibles como "asunto", "palabras clave", "resumen" y "descripción".</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">2. Sobre el texto en general</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                        <li>a. Se utiliza un lenguaje claro y directo.</li>
+                                        <li>b. Las fuentes preferidas son Times New Roman, Verdana, Arial, Tahoma, Helvetica, Calibri u otra de fácil lectura.</li>
+                                        <li>c. El tamaño mínimo de fuente es de 12 puntos.</li>
+                                        <li>d. El interlineado mínimo es de 1.5.</li>
+                                        <li>e. Se evita el texto en formato de imagen.</li>
+                                        <li>f. Se crean listas utilizando las funciones del procesador de texto.</li>
+                                        <li>g. No se incorporan elementos parpadeantes o animados.</li>
+                                        <li>h. No se incluyen imágenes de fondo o marcas de agua.</li>
+                                        <li>i. El índice o tabla de contenidos se inserta automáticamente.</li>
+                                        <li>j. La numeración de páginas se realiza con la función propia del procesador de texto.</li>
+                                        <li>k. Las notas al pie se agregan utilizando la función del procesador de texto.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">3. Estructura y encabezados</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                        <li>a. Se emplean encabezados de estilo para organizar el documento.</li>
+                                        <li>b. Los encabezados son visibles en el panel de navegación.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">4. Idioma(s)</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                        <li>a. Se especifica el idioma del texto o se indican los diferentes idiomas utilizados en el documento y párrafos específicos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">5. Enlaces</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                        <li>a. Se describe el destino o propósito del enlace.</li>
+                                        <li>b. Se verifica que los enlaces conduzcan al contenido correcto.</li>
+                                        <li>c. Se evita utilizar el mismo texto para enlazar a diferentes destinos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">6. Tablas</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                        <li>a. Se utilizan las funciones de inserción para crear tablas.</li>
+                                        <li>b. Las tablas siguen un orden lógico de lectura.</li>
+                                        <li>c. Las tablas son simples y no incluyen celdas combinadas o divididas.</li>
+                                        <li>d. No se dejan celdas en blanco.</li>
+                                        <li>e. La primera fila se designa como "encabezado".</li>
+                                        <li>f. La primera fila se configura para repetirse.</li>
+                                        <li>g. Se deshabilita la opción de dividir filas entre páginas.</li>
+                                        <li>h. Se deshabilita la opción de texto alrededor de la tabla.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">7. Textos alternativos para imágenes y tablas</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                        <li>a. Se proporcionan textos alternativos descriptivos.</li>
+                                        <li>b. Estos textos describen adecuadamente la imagen, tabla u objeto.</li>
+                                        <li>c. Se ofrece una descripción adicional en el texto circundante para objetos complejos.</li>
+                                        <li>d. No se incluyen objetos flotantes relevantes en el documento.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="colapsador enfoque-pedagogico">
+                            <button data-toggle="collapse" data-target="#colap-1" class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">8. Color y contraste</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+                
+                            <div id="colap-1" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <ul class="parrafo s-vin mb-0">
+                                        <li>a. Se evita el uso del color para enfatizar texto importante o se ofrece un método alternativo.</li>
+                                        <li>b. El texto e imágenes son legibles y contrastan adecuadamente con el fondo.</li>
+                                        <li>c. Se mantiene un ratio de contraste de al menos 4.5:1 para texto menor a 18 puntos o 14 puntos si está en negrita.</li>
+                                        <li>d. Se garantiza un ratio de contraste de al menos 3.0:1 para texto de 18 puntos o más, o 14 puntos si está en negrita.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="movil">
+                        
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="container padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos">
+                        Título
+                    </h2>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer" style="position: relative">
+        <span type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </span>
+
+        <div class="escritorio">
+            <div class="tamaño_Img_Footer">
+                <img class="tamaño__img ocultar" src="./images/SDI-_firmauv-e.png" loading="lazy" width="100%"
+                    height="auto" alt="Logo de la Universidad Veracruzana" />
+            </div>
+            <div>
+                <img class="mostrar" src="./images/SDI-_firmauv-r.png" alt="Banner Principal" aria-hidden="true"
+                    width="100%" height="auto" />
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+
+    <div class="modal fade" id="methods-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul" lang="es">
+                                Tiflotecnología
+                            </p>
+                        </div>
+
+                        <p class="parrafo">La tiflotecnología se centra en la utilización de herramientas tecnológicas por parte de personas con discapacidad visual para mejorar su calidad de vida. Este término deriva de la palabra griega "<i lang="la">tiflos</i>", que significa "ciego", y "tecnología", que se compone de "<i lang="la">tekhne</i>" (arte, técnica u oficio) y "-logia" (estudio, tratado o ciencia). Así, la tiflotecnología abarca el estudio, los recursos y las técnicas relacionadas con el uso de tecnología para estas personas, con el fin de aprovechar sus habilidades y promover su inclusión social (Martínez, Naranjo, Torres & Castro, 2022).</p>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="methods-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul" lang="es">
+                                Sistemas autónomos
+                            </p>
+                        </div>
+
+                        <p class="parrafo">Estos sistemas tienen capacidades propias para llevar a cabo ciertas funciones, aunque en su mayoría pueden conectarse a una computadora para realizar otras actividades adicionales. Estos sistemas se dividen en visuales, táctiles y auditivos.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="methods-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul" lang="es">
+                                Sistemas de acceso a la computadora
+                            </p>
+                        </div>
+
+                        <p class="parrafo">Se trata de adaptaciones diseñadas para computadoras personales (PC). Se distinguen según el sistema sensorial utilizado: visual, táctil y auditivo.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="methods-4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul" lang="es">
+                                Sistemas periféricos específicos
+                            </p>
+                        </div>
+
+                        <p class="parrafo mb-0">En el ámbito educativo y social, se pueden identificar dos categorías principales de tecnologías y dispositivos destinados a personas con discapacidad visual:</p>
+                        <ul class="parrafo ml-4">
+                            <li>Para personas con restos visuales.</li>
+                            <li>Para invidentes totales (Martínez, Naranjo, Torres & Castro, 2022).</li>                            
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="information-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" lang="es">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Close" accesskey="X">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+                        
+                        <div class="text-center mb-3">
+    
+                            <p class="parrafo mt-4">
+                                <strong>Información de ayuda</strong>
+                            </p>
+    
+                        </div>
+                        
+                        <p class="parrafo">
+                            Para navegar de mejor manera dentro de la experiencia hemos puesto una serie de atajos para que puedas acceder de forma más rápida a algunos elementos dentro de la experiencia;
+                            como botones, enlaces, evaluaciones etc.
+                        </p>
+
+                        <p class="parrafo">
+                            A continuación te presentamos estos atajos.
+                        </p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir la ventana con la información de ayuda: Alt + I </li>
+                            <li>Practice Activity OPA05. My lovely family: Alt + 1</li>
+                            <li>Practice Activity OPA06. Family tree: Alt + 2</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" style="border-radius: 7px;" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    <!-- Funcionalidad general -->
+    <!-- ../scripts/home.js -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+
+    <!-- Funcionalidad para Progress-bar-scroll del inicio -->
+    <!-- ../scripts/scroll-timeline.js -->
+    <script src="scripts/scroll-timeline.js"></script>
+
+    <script>
+        // Create ScrollTimeline
+        const myScrollTimeline = new ScrollTimeline({
+            source: document.scrollingElement,
+            scrollSource: document.scrollingElement, // For legacy implementations
+            orientation: "block",
+            scrollOffsets: [
+                new CSSUnitValue(0, "percent"),
+                new CSSUnitValue(100, "percent"),
+            ],
+        });
+
+        // Animate Progress Bar on Scroll
+        new Animation(
+            new KeyframeEffect(
+                document.querySelector("#progress"),
+                {
+                    transform: ["scaleX(0)", "scaleX(1)"],
+                },
+                { duration: 1, fill: "forwards" }
+            ),
+            myScrollTimeline
+        ).play();
+    </script>
+    <!--  -->
+
+    <!-- IR ARRIBA -->
+    <script>
+        $(document).ready(function () {
+            $(".ir-arriba").click(function () {
+                $("body, html").animate(
+                    {
+                        scrollTop: "0px",
+                    },
+                    300
+                );
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $(".ir-arriba").slideDown(300);
+                } else {
+                    $(".ir-arriba").slideUp(300);
+                }
+            });
+        });
+    </script>
+
+    <script>
+
+    var swiper = new Swiper(".mySwiper", {
+      speed: 600,
+      parallax: true,
+      
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+
+</body>
+<script src="scripts/Pestañas.js"></script>
+
+</html>

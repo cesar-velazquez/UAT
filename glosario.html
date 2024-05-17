@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Glosario</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet" />
+
+
+    <!-- Estilos propios -->
+    <!-- <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/unit1.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/unit1.css" />
+    <link rel="stylesheet" href="css/tabs.css">
+
+    <!-- Libreria para animar  los recursos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+    <!-- Instrucción para información de ayuda -->
+    <div>
+        <p class="sr-only" >
+            Instrucción: Para acceder a la información de ayuda de esta experiencia educativa en Windows presiona las teclas Alt + i, en MacOS Option + i, Para cerrar la ventana con la información de ayuda en Windows presiona las teclas  Alt + X, en MacOS Esc
+        </p>
+    </div>
+
+    <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="I">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </button>
+
+    <!-- Barra de progreso en la parte superior -->
+    <div id="progress"></div>
+
+    <!-- SIDEBAR MENÚ -->
+    <navbar class="sidebar" style="overflow-y: scroll">
+        <div class="sidebar__encabezado">
+            <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
+                <span>X</span>
+            </button>
+        </div>
+
+        <menu-component></menu-component>
+    </navbar>
+
+    <!-- PLECA Y TITULO -->
+    <header class="banner-1">
+        <div class="escritorio">
+            <div class="js-pleca pleca">
+                <a class="pleca__uv" href="https://uv.mx/" target="__blank" >Universidad Veracruzana</a>
+
+                <div class="dropdown">
+                    <button class="btn btn-menu js-sidebar__collapse" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="M">
+                        <span class="font-weight-bold">MENÚ&nbsp;&nbsp;</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="pleca__ee container ml-0" style="display: none">
+                    <span class="text-left">
+                        <p class="tam-font font-weight-bold mb-3 texto-tema-margen">
+                            <b>Glosario</b>
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <img class="ocultar" src="./images/SDI-_banner-pagint-e.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+
+            <img class="mostrar" src="./images/SDI-_banner-pagint-r.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+        </div>
+
+        <div class="container titulo-principal-unit">
+            <!-- titulo-principal-unit margin-left-titulo -->
+            <div class="padding__escritorio ">
+                <h1 class=" padding__movil container__titulo  margin-left-titulo
+                font-weight-bold top_h1 ">
+                    Glosario
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Codigo principal -->
+    <main>
+        <!-- introduction -->
+        
+            <!-- py-4 -->
+            <div class="container  ">
+                <!--
+                <div class="mb-4 mb-md-5 presentacion padding__escritorio padding__movil">
+                    <h2 class="parrafop text-azul subtitulos text__color font-weight-bold">Introducción</h2>
+
+                    <p class="presentacionig ">
+                        La comprensión de los conceptos básicos relacionados con la accesibilidad y la tecnología es fundamental para garantizar un entorno educativo inclusivo. En el tema 1 se abordan los conceptos esenciales que sientan las bases para una operación efectiva de las Unidades de Accesibilidad Tecnológica (UAT). En este tema, se exploran diversos conceptos relacionados con la accesibilidad, a fin de comprender la importancia de adoptar un enfoque inclusivo en el entorno educativo.
+                    </p>
+                </div>
+                -->
+
+                <div class="container padding__escritorio padding__movil">
+                    
+                    <p class="parrafo mb-0"><b>Accesibilidad</b></p>
+                    <p class="parrafo">La accesibilidad permite que cualquier persona utilice un entorno u objeto de manera amigable y segura, según la Organización Internacional de Normalización, adaptándose a diversas características, habilidades y necesidades de los usuarios (ANUIES, 2020).</p>
+
+                    <p class="parrafo mb-0"><b>Ajustes razonables </b></p>
+                    <p class="parrafo">Son las modificaciones y adaptaciones necesarias y adecuadas del ambiente físico, social y actitudinal a las necesidades específicas de las personas con discapacidad que no impongan una carga desproporcionada o indebida, cuando se requieran en un caso particular de manera eficaz y práctica, para facilitar la accesibilidad y la participación, y para garantizar a las personas con discapacidad el goce o ejercicio, en igualdad de condiciones con las demás, de todos los derechos (Gobierno de España, 2013).</p>
+
+                    <p class="parrafo mb-0"><b>Discapacidad</b></p>
+                    <p class="parrafo">“Resulta de la interacción entre las personas con deficiencias y las barreras debidas a la actitud y al entorno que limitan su participación plena y efectiva en la sociedad, en igualdad de condiciones con las demás” (ONU, 2006).</p>
+
+                    <p class="parrafo mb-0"><b>Tecnología de asistencia</b></p>
+                    <p class="parrafo">La tecnología de asistencia abarca desde dispositivos simples como lupas hasta sistemas complejos de comunicación computarizados, pudiendo ser hechos a mano, comprados de fábrica o adaptados de productos existentes (Hess & Gutiérrez, 2018).</p>
+
+                    <p class="parrafo mb-0"><b>Tiflotecnología</b></p>
+                    <p class="parrafo">La tiflotecnología busca mejorar la vida de personas con discapacidad visual mediante herramientas tecnológicas, abarcando el estudio y recursos para promover su inclusión social (Martínez, Naranjo, Torres & Castro, 2022).</p>
+
+                    <p class="parrafo mb-0"><b>WCAG </b></p>
+                    <p class="parrafo">Los documentos denominados pautas de accesibilidad al contenido en la web (<i lang="en">Web Content Accessibility Guidelines</i>) explican cómo hacer que el contenido web sea accesible para personas con discapacidad. Son parte de una serie de pautas de accesibilidad, que incluyen las pautas de accesibilidad para herramientas de autor (ATAG) y las pautas de accesibilidad para agentes de usuario (ISO/IEC 40500, 2012).</p>
+
+                    <p class="parrafo mb-0"><b>Accesibilidad al contenido en la web</b></p>
+                    <p class="parrafo">La accesibilidad web asegura que personas con discapacidades puedan usar Internet, mediante el diseño de páginas web que les permitan percibir, entender, navegar e interactuar con el contenido en línea. Además de ayudar a personas con discapacidad, también beneficia a otros grupos como las personas mayores cuyas habilidades pueden disminuir con la edad (Lujan, Introducción a la accesibilidad web).</p>
+
+                    <p class="parrafo mb-0"><b>Curso</b></p>
+                    <p class="parrafo">Un curso es un conjunto de clases o un plan de estudio sobre un tema en particular, que generalmente finaliza con un examen o calificación (<i lang="en">SafetyCulture</i>, 2024).</p>
+
+                    <p class="parrafo mb-0"><b>ZoomText</b></p>
+                    <p class="parrafo">Es un <i lang="en">software</i> que proporciona características tanto de ampliación como de lectura de la pantalla (España, 2015).</p>
+
+                    <p class="parrafo mb-0"><b>Línea Braille </b></p>
+                    <p class="parrafo">Una línea Braille convierte el contenido en código Braille desde otros dispositivos como computadoras o teléfonos móviles, permitiendo que personas ciegas o con baja visión, accedan a la información de estos dispositivos (Lujan, Universidad de Alicante, 2024).</p>
+
+                    <p class="parrafo mb-0"><b>Jaws Pro</b></p>
+                    <p class="parrafo">Es un programa informático diseñado para leer en voz alta el contenido en pantalla dirigido a personas con ceguera o con dificultades visuales.</p>
+
+                </div>
+
+
+            </div>
+      
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer" style="position: relative">
+        <span type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </span>
+
+        <div class="escritorio">
+            <div class="tamaño_Img_Footer">
+                <img class="tamaño__img ocultar" src="./images/SDI-_firmauv-e.png" loading="lazy" width="100%"
+                    height="auto" alt="Logo de la Universidad Veracruzana" />
+            </div>
+            <div>
+                <img class="mostrar" src="./images/SDI-_firmauv-r.png" alt="Banner Principal" aria-hidden="true"
+                    width="100%" height="auto" />
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+
+    <div class="modal fade" id="information-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Close" accesskey="X">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+                        
+                        <div class="text-center mb-3">
+    
+                            <p class="parrafo mt-4">
+                                <strong>Información de ayuda</strong>
+                            </p>
+    
+                        </div>
+                        
+                        <p class="parrafo">
+                            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+                        </p>
+
+                        <p class="parrafo mb-0"><b>Windows</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Alt + M</li>
+                            <li>Cerrar menú principal Alt + C</li>
+                        </ul>
+
+                        <p class="parrafo mb-0"><b>MacOS</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Option + M</li>
+                            <li>Cerrar menú principal Option + C</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" style="border-radius: 7px;" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    <!-- Funcionalidad general -->
+    <!-- ../scripts/home.js -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+
+    <!-- Funcionalidad para Progress-bar-scroll del inicio -->
+    <!-- ../scripts/scroll-timeline.js -->
+    <script src="scripts/scroll-timeline.js"></script>
+
+    <script>
+        // Create ScrollTimeline
+        const myScrollTimeline = new ScrollTimeline({
+            source: document.scrollingElement,
+            scrollSource: document.scrollingElement, // For legacy implementations
+            orientation: "block",
+            scrollOffsets: [
+                new CSSUnitValue(0, "percent"),
+                new CSSUnitValue(100, "percent"),
+            ],
+        });
+
+        // Animate Progress Bar on Scroll
+        new Animation(
+            new KeyframeEffect(
+                document.querySelector("#progress"),
+                {
+                    transform: ["scaleX(0)", "scaleX(1)"],
+                },
+                { duration: 1, fill: "forwards" }
+            ),
+            myScrollTimeline
+        ).play();
+    </script>
+    <!--  -->
+
+    <!-- IR ARRIBA -->
+    <script>
+        $(document).ready(function () {
+            $(".ir-arriba").click(function () {
+                $("body, html").animate(
+                    {
+                        scrollTop: "0px",
+                    },
+                    300
+                );
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $(".ir-arriba").slideDown(300);
+                } else {
+                    $(".ir-arriba").slideUp(300);
+                }
+            });
+        });
+    </script>
+
+    <script>
+
+    var swiper = new Swiper(".mySwiper", {
+      speed: 600,
+      parallax: true,
+      
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+
+</body>
+<script src="scripts/Pestañas.js"></script>
+
+</html>
