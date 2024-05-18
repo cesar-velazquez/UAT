@@ -1,23 +1,24 @@
-$(function() {
 
-    const btnAumentarFuente = document.getElementById('font-size');
-    const parrafo = document.querySelector('.parrafo');
-    const titulos = document.querySelectorAll("h2");
-    const parrafos = document.querySelectorAll("p");
+const btnAumentarFuente = document.getElementById('font_size');
+const parrafo = document.querySelector('.parrafo');
+const titulos = document.querySelectorAll("h2");
+const parrafos = document.querySelectorAll("p");
 
-    let tamFuenteParrafos = 1.3; // Tamaño de fuente inicial
+let tamFuenteParrafos = 1.3; // Tamaño de fuente inicial
 
-    btnAumentarFuente.addEventListener('click', function() {
-    
-        tamFuenteParrafos += 0.25; // Aumentar 0.2 rem en cada click
+btnAumentarFuente.addEventListener('click', function() {
 
-        if (tamFuenteParrafos > 1.8) {
-            tamFuenteParrafos = 1.3; // Restablecer a 1.3 rem si se supera 1.8 rem
-        }
+    console.log("Se hizo click");
 
-        parrafos.style.add = tamFuenteParrafos + 'rem';
-        parrafos.style.transitionDuration = "2s";
-      
+    tamFuenteParrafos += 0.25; // Aumentar 0.2 rem en cada click
+
+    if (tamFuenteParrafos > 1.8) {
+        tamFuenteParrafos = 1.3; // Restablecer a 1.3 rem si se supera 1.8 rem
+    }
+
+    parrafos.forEach(parrafo => {
+        parrafo.style.fontSize = tamFuenteParrafos + 'rem';
+        parrafo.style.transitionDuration = "1s";
     });
-
+    
 });
