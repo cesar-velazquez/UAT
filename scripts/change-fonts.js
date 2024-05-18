@@ -2,18 +2,21 @@ $(function() {
 
     const btnAumentarFuente = document.getElementById('font-size');
     const parrafo = document.querySelector('.parrafo');
+    const titulos = document.querySelectorAll("h2");
+    const parrafos = document.querySelectorAll("p");
 
-    let tamañoFuente = 1.3; // Tamaño de fuente inicial
+    let tamFuenteParrafos = 1.3; // Tamaño de fuente inicial
 
     btnAumentarFuente.addEventListener('click', function() {
+    
+        tamFuenteParrafos += 0.25; // Aumentar 0.2 rem en cada click
 
-      tamañoFuente += 0.2; // Aumentar 0.2 rem en cada click
+        if (tamFuenteParrafos > 1.8) {
+            tamFuenteParrafos = 1.3; // Restablecer a 1.3 rem si se supera 1.8 rem
+        }
 
-      if (tamañoFuente > 1.8) {
-        tamañoFuente = 1.3; // Restablecer a 1.3 rem si se supera 1.8 rem
-      }
-
-      parrafo.style.add = tamañoFuente + 'rem';
+        parrafos.style.add = tamFuenteParrafos + 'rem';
+        parrafos.style.transitionDuration = "2s";
       
     });
 
