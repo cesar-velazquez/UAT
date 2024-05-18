@@ -1,6 +1,6 @@
 $(function() {
 
-    const btnAumentarFuente = document.getElementById('btnAumentarFuente');
+    const btnAumentarFuente = document.getElementById('font-size');
     const parrafo = document.querySelector('.parrafo');
 
     let tamañoFuente = 1.3; // Tamaño de fuente inicial
