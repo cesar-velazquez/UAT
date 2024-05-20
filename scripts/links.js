@@ -7,8 +7,6 @@ let resaltar = false;
 
 botonResaltar.addEventListener("click", function() {
     
-    console.log("Se hizo click");
-
     resaltar = !resaltar;
 
     enlaces.forEach(enlace => {
