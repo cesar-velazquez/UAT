@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return alert("Tu navegador no soporta el reconcimiento de voz");
     }
 
+    let refreshPage = function () {
+        location.reload();
+    }
+
     var getPageNext = function () {
         location.href = './index.html';
         // window.open("https://github.com/TalAter/annyang", '_blank');
@@ -34,6 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop.style.display = "block";
     }
 
+    let abrirAyuda = function () {
+        let modal = document.getElementById("methods-help");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarAyuda = function () {
+        let modal = document.getElementById("methods-help");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
 
 
     let cerrarmodal1 = function () {
@@ -41,72 +62,100 @@ document.addEventListener("DOMContentLoaded", function () {
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
-        modalAbierto1 = false;
         backdrop.style.display = "none";
     }
 
     let abrirmodal2 = function () {
         let modal = document.getElementById("methods-2");
+        let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px";
         modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
     }
 
     let cerrarModal2 = function () {
         let modal = document.getElementById("methods-2");
+        let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
     }
 
     let abrirmodal3 = function () {
         let modal = document.getElementById("methods-3");
+        let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px";
         modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
     }
     let cerrarmodal3 = function () {
         let modal = document.getElementById("methods-3");
+        let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
     }
 
     let modalAbierto1 = false;
     let modalAbierto2 = false;
     let modalAbierto3 = false;
+    let modalAbierto4 = false;
 
     function abrirModal11() {
-        if (modalAbierto2 == true || modalAbierto3 == true) {
+        if (modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true) {
             cerrarModal2();
             modalAbierto2 = false;
             cerrarmodal3();
             modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
         }
-        // Abre el modal 1
         abrirModal1();
         modalAbierto1 = true;
         document.body.classList.add("modal-open");
     }
 
     function abrirModal22() {
-        if (modalAbierto1 == true || modalAbierto3 == true) {
+        if (modalAbierto1 == true || modalAbierto3 == true || modalAbierto4 == true) {
             cerrarmodal1();
             modalAbierto1 = false;
             cerrarmodal3();
             modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
         }
-        // Abre el modal 1
         abrirmodal2();
         modalAbierto2 = true;
     }
 
     function abrirModal33() {
-        if (modalAbierto1 == true || modalAbierto2 == true) {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto4 == true) {
             cerrarmodal1();
             modalAbierto1 = false;
             cerrarModal2();
             modalAbierto2 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
         }
-        // Abre el modal 1
         abrirmodal3();
         modalAbierto3 = true;
+    }
+
+    function abrirModalAyuda() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+        }
+        abrirAyuda();
+        modalAbierto4 = true;
     }
 
     let abrirfaqBasic = function () {
@@ -118,8 +167,26 @@ document.addEventListener("DOMContentLoaded", function () {
         abrirfaq.nextElementSibling.classList.add('show');
     }
 
+    let abrirfaqBasic2 = function () {
+        let abrirfaq = document.getElementById("basicas-2");
+        abrirfaq.classList.add("expandido");
+        abrirfaq.classList.add("btn-expandido");
+        abrirfaq.classList.remove('collapsed');
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        abrirfaq.nextElementSibling.classList.add('show');
+    }
+
     let cerrarfaqBasic = function () {
         let cerrarfaq = document.getElementById("basicas-1");
+        cerrarfaq.classList.remove("expandido");
+        cerrarfaq.classList.remove("btn-expandido");
+        cerrarfaq.classList.add('collapsed');
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.nextElementSibling.classList.remove('show');
+    }
+
+    let cerrarfaqBasic2 = function () {
+        let cerrarfaq = document.getElementById("basicas-2");
         cerrarfaq.classList.remove("expandido");
         cerrarfaq.classList.remove("btn-expandido");
         cerrarfaq.classList.add('collapsed');
@@ -139,6 +206,17 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está abierto, ciérralo
             cerrarfaqBasic();
             faqAbierto = false;
+        }
+    }
+
+    let faqAbierto2 = false;
+    function abrirCerrarfaq2() {
+        if (!faqAbierto2) {
+            abrirfaqBasic2();
+            faqAbierto2 = true;
+        } else {
+            cerrarfaqBasic2();
+            faqAbierto2 = false;
         }
     }
 
@@ -206,20 +284,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let element = document.getElementById("ident1_16");
         PositionTop(element);
     }
-
-    // let section13 = function () {
-    //     let element = document.getElementById('ident1_13');
-    //     PositionTop(element);
-    // }
-
-    // let section16 = function () {
-    //     let element = document.getElementById('ident1_16');
-    //     PositionTop(element);
-    // }
-
-
-
-
 
     var cerrarMenuPrincipal = function () {
         var cerrarmenu = document.getElementById("menu-item");
@@ -289,6 +353,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
     var commands = {
         'Desplazar hacia abajo': scrollBottom,
         'Desplazar hacia arriba': scrollTo,
@@ -350,17 +416,19 @@ document.addEventListener("DOMContentLoaded", function () {
         // '15': abrirfaqBasic,
         // 'Quince': abrirfaqBasic,
 
-        // '18': abrirCerrarfaq2,
-        // 'Dieciocho': abrirCerrarfaq2,
+        '18': abrirCerrarfaq2,
+        'Dieciocho': abrirCerrarfaq2,
 
-        '19': abrirCerrarfaq,
-        'Diecinueve': abrirCerrarfaq,
+        '19': volverA,
+        'Diecinueve': volverA,
 
-        // '16': cerrarfaqBasic,
+        '0': abrirModalAyuda,
+        'cero': abrirModalAyuda,
+
+        'cerrar': cerrarAyuda,
         // 'Dieciséis': cerrarfaqBasic,
-
-        // '17': cerrarfaqBasic,
-        // 'Dieciséis': cerrarfaqBasic,
+        'F5': refreshPage,
+        'efe cinco': refreshPage,
 
 
 
@@ -386,6 +454,7 @@ document.addEventListener("DOMContentLoaded", function () {
 let microfono = document.getElementById("micro");
 const btn_access = document.getElementById('btn-access');
 let contenedor_notas = document.getElementById("container_notes");
+let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
 let num2 = document.getElementById("ident2");
 let num3 = document.getElementById("ident3");
@@ -398,6 +467,8 @@ let num9 = document.getElementById("ident9");
 let num10 = document.getElementById("ident10");
 let num11 = document.getElementById("ident11");
 let num11_1 = document.getElementById("ident1_1");
+let num1_h = document.getElementById("ident1_h");
+let cerrar = document.getElementById("identcerrar");
 
 let num12 = document.getElementById("ident12");
 let num13_1 = document.getElementById("ident1_2");
@@ -410,6 +481,7 @@ let num16 = document.getElementById("ident16");
 
 let num17 = document.getElementById("ident17");
 let num18 = document.getElementById("ident18");
+let num19 = document.getElementById("ident19");
 
 
 
@@ -425,7 +497,11 @@ btn_access.addEventListener('click', function () {
     contenedor_notas.style.justifyContent = "center";
     contenedor_notas.style.alignItems = "center";
     contenedor_notas.style.padding = "2rem";
-    // Número 1
+    // num0.style.display = "inline-flex";
+    // num0.style.position = "fixed";
+    // num0.style.top = "39%";
+    // num0.style.right = "3.2rem";
+    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat')
     num1.style.display = "flex";
     num1.style.transitionDuration = "3s";
     num1.style.animationDuration = "3s";
@@ -435,31 +511,34 @@ btn_access.addEventListener('click', function () {
     num3.style.display = "inline-flex";
     num4.style.display = "inline-flex";
     num5.style.display = "inline-flex";
-    num6.style.display = "inline-flex";
-    num7.style.display = "inline-flex";
-    num8.style.display = "inline-flex";
-    num9.style.display = "inline-flex";
-    num10.style.display = "inline-flex";
+    num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+    // num10.style.display = "inline-flex";
+    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+
+    cerrar.style.display = "inline-flex";
     num11.style.display = "inline-flex";
     num11_1.style.display = "inline-flex";
+    num1_h.style.display = "inline-flex";
 
-    num12.style.display = "inline-flex";
+    // num12.style.display = "inline-flex";
+    num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+
     num13_1.style.display = "inline-flex";
 
     num13.style.display = "inline-flex";
-    num14.style.display = "inline-flex";
+    // num14.style.display = "inline-flex";
+    num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+
     num15.style.display = "inline-flex";
     num15_3.style.display = "inline-flex";
-    num16.style.display = "inline-flex";
-    num17.style.display = "inline-flex";
-    num17.style.position = "absolute";
-    num17.style.top = "0";
-    num17.style.right = "0";
-
-    num18.style.display = "inline-flex";
-    num18.style.position = "absolute";
-    num18.style.top = "0";
-    num18.style.right = "0";
+    // num16.style.display = "inline-flex";
+    num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
+    num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num18.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
 });
 

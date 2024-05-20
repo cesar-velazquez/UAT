@@ -36,6 +36,38 @@ body {
     left: 0;
 }
 
+.btnLecturaFacil {
+    color: black;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 1rem 1.5rem;
+    width: 150px;
+    border: none;
+    font-size: 1.3rem;
+    z-index: 1;
+    background-color: white;
+    transition-duration: 1s;
+}
+
+
+.btnLecturaFacil:hover {
+    background-color: black;
+    color: white;
+    transition-duration: 1s;
+}
+
+/* .btnLecturaFacil {
+    color: black;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 1rem 1.5rem;
+    width: 200px;
+    border: none;
+    font-size: 1.3rem;
+    z-index: 1;
+    background-color: white;
+} */
+
 /* INICIO */
 .center_tabs {
     display: grid;
@@ -2316,6 +2348,7 @@ h1.texto-azul:after,
     border-radius: 4px;
     font-weight: bold;
     text-transform: inherit;
+    z-index: 1;
 }
 
 .btn-azul-modals:hover {

@@ -10,6 +10,52 @@
     }
 }
 
+.ident_Universal {
+    display: inline-flex !important;
+    transition-duration: 3s;
+    animation-duration: 3s;
+}
+
+.play_video {
+    position: absolute;
+    background: #ff000057;
+    display: inline;
+    bottom: 1.5rem;
+    left: 16rem;
+}
+
+.ident_Cero {
+    display: inline-flex !important;
+    position: fixed;
+    top: 39%;
+    right: 3.2rem;
+}
+
+.ident_Faqs {
+    display: inline-flex !important;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+}
+
+/* identificador3 */
+.identificador3 {
+    font-size: 1rem;
+    text-indent: 0em;
+    position: absolute;
+    font-weight: bold;
+    z-index: 1;
+    background: #f8c5fd;
+    width: 49px;
+    height: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    top: 0;
+    right: 1rem;
+}
+
 /* backDrop */
 #modal-backdrop {
     position: fixed;
@@ -26,7 +72,25 @@
 }
 
 /* fin backdrop */
+.animate-bounceIn {
+    animation: bounce 8s infinite;
+}
 
+/* boton de ayuda */
+.help {
+    position: fixed;
+    background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%);
+    z-index: 1;
+    right: 1.5rem;
+    top: 40%;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* boton de ayuda fin */
 /* Identificador 1 */
 .container_menu {
     position: relative;
