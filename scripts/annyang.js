@@ -157,41 +157,21 @@ document.addEventListener("DOMContentLoaded", function () {
         abrirAyuda();
         modalAbierto4 = true;
     }
+    // prueba faq    
 
-    let abrirfaqBasic = function () {
-        let abrirfaq = document.getElementById("basicas-1");
-        abrirfaq.classList.add("expandido");
-        abrirfaq.classList.add("btn-expandido");
+    let abrirfaqBasicaP = function () {
+        let abrirfaq = document.getElementById("basic1");
         abrirfaq.classList.remove('collapsed');
         abrirfaq.setAttribute('aria-expanded', 'true');
         abrirfaq.nextElementSibling.classList.add('show');
+
     }
 
-    let abrirfaqBasic2 = function () {
-        let abrirfaq = document.getElementById("basicas-2");
-        abrirfaq.classList.add("expandido");
-        abrirfaq.classList.add("btn-expandido");
-        abrirfaq.classList.remove('collapsed');
-        abrirfaq.setAttribute('aria-expanded', 'true');
-        abrirfaq.nextElementSibling.classList.add('show');
-    }
-
-    let cerrarfaqBasic = function () {
-        let cerrarfaq = document.getElementById("basicas-1");
-        cerrarfaq.classList.remove("expandido");
-        cerrarfaq.classList.remove("btn-expandido");
+    let cerrarfaqBasicP = function () {
+        let cerrarfaq = document.getElementById("basic1");
         cerrarfaq.classList.add('collapsed');
         cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.nextElementSibling.classList.remove('show');
-    }
-
-    let cerrarfaqBasic2 = function () {
-        let cerrarfaq = document.getElementById("basicas-2");
-        cerrarfaq.classList.remove("expandido");
-        cerrarfaq.classList.remove("btn-expandido");
-        cerrarfaq.classList.add('collapsed');
-        cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.nextElementSibling.classList.remove('show');
+        cerrarfaq.nextElementSibling.classList.remove('show')
     }
 
     let faqAbierto = false;
@@ -200,25 +180,101 @@ document.addEventListener("DOMContentLoaded", function () {
         // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
         if (!faqAbierto) {
             // Si el FAQ está cerrado, ábrelo
-            abrirfaqBasic();
+            abrirfaqBasicaP();
             faqAbierto = true;
         } else {
             // Si el FAQ está abierto, ciérralo
-            cerrarfaqBasic();
+            cerrarfaqBasicP();
             faqAbierto = false;
         }
     }
 
+    // segundo faq
+    let abrirfaqBasicaP2 = function () {
+        let abrirfaq = document.getElementById("basic2");
+        abrirfaq.classList.remove('collapsed');
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        abrirfaq.nextElementSibling.classList.add('show');
+
+    }
+
+    let cerrarfaqBasicP2 = function () {
+        let cerrarfaq = document.getElementById("basic2");
+        cerrarfaq.classList.add('collapsed');
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.nextElementSibling.classList.remove('show')
+    }
+
     let faqAbierto2 = false;
+
     function abrirCerrarfaq2() {
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
         if (!faqAbierto2) {
-            abrirfaqBasic2();
+            // Si el FAQ está cerrado, ábrelo
+            abrirfaqBasicaP2();
             faqAbierto2 = true;
         } else {
-            cerrarfaqBasic2();
+            // Si el FAQ está abierto, ciérralo
+            cerrarfaqBasicP2();
             faqAbierto2 = false;
         }
     }
+
+    // prueba faq fin
+
+    let abrirfaqBasic = function () {
+        let abrirfaq = document.getElementById("basicas-1");
+        abrirfaq.classList.remove('collapsed');
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        // abrirfaq.nextElementSibling.classList.add('show');
+    }
+
+    let abrirfaqBasic2 = function () {
+        let abrirfaq = document.getElementById("basicas-2");
+        abrirfaq.classList.remove('collapsed');
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        abrirfaq.nextElementSibling.classList.add('show');
+    }
+
+    let cerrarfaqBasic = function () {
+        let cerrarfaq = document.getElementById("basicas-1");
+        cerrarfaq.classList.add('collapsed');
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.nextElementSibling.classList.remove('show')
+    }
+
+    let cerrarfaqBasic2 = function () {
+        let cerrarfaq = document.getElementById("basicas-2");
+        cerrarfaq.classList.add('collapsed');
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.nextElementSibling.classList.remove('show')
+    }
+
+    // let faqAbierto = false;
+
+    // function abrirCerrarfaq() {
+    //     // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+    //     if (!faqAbierto) {
+    //         // Si el FAQ está cerrado, ábrelo
+    //         abrirfaqBasic();
+    //         faqAbierto = true;
+    //     } else {
+    //         // Si el FAQ está abierto, ciérralo
+    //         cerrarfaqBasic();
+    //         faqAbierto = false;
+    //     }
+    // }
+
+    // let faqAbierto2 = false;
+    // function abrirCerrarfaq2() {
+    //     if (!faqAbierto2) {
+    //         abrirfaqBasic2();
+    //         faqAbierto2 = true;
+    //     } else {
+    //         cerrarfaqBasic2();
+    //         faqAbierto2 = false;
+    //     }
+    // }
 
 
     let descargarlecturafacil = function () {
@@ -349,11 +405,10 @@ document.addEventListener("DOMContentLoaded", function () {
         volverArriba.click();
     }
 
-
-
-
-
-
+    let btn19 = document.getElementById("ident19");
+    let downloadbtnLectura = function () {
+        btn19.click();
+    }
 
     var commands = {
         'Desplazar hacia abajo': scrollBottom,
@@ -412,15 +467,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '17': abrirCerrarfaq,
         'Diecisiete': abrirCerrarfaq,
-
-        // '15': abrirfaqBasic,
-        // 'Quince': abrirfaqBasic,
+        // '17': abrirfaqBasicaP,
+        // 'Diecisiete': abrirfaqBasicaP,
 
         '18': abrirCerrarfaq2,
         'Dieciocho': abrirCerrarfaq2,
 
-        '19': volverA,
-        'Diecinueve': volverA,
+
+        // '15': abrirfaqBasic,
+        // 'Quince': abrirfaqBasic,
+
+        // '18': abrirCerrarfaq2,
+        // 'Die
+        '19': downloadbtnLectura,
+        'Diecinueve': downloadbtnLectura,
+
+        '20': volverA,
+        'veinte': volverA,
 
         '0': abrirModalAyuda,
         'cero': abrirModalAyuda,
@@ -480,9 +543,9 @@ let num15_3 = document.getElementById("ident15_3");
 let num16 = document.getElementById("ident16");
 
 let num17 = document.getElementById("ident17");
-let num18 = document.getElementById("ident18");
+let num18 = document.getElementById("ident18_f");
 let num19 = document.getElementById("ident19");
-
+let num20 = document.getElementById("ident20");
 
 
 btn_access.addEventListener('click', function () {
@@ -497,6 +560,7 @@ btn_access.addEventListener('click', function () {
     contenedor_notas.style.justifyContent = "center";
     contenedor_notas.style.alignItems = "center";
     contenedor_notas.style.padding = "2rem";
+    contenedor_notas.style.zIndex = "53";
     // num0.style.display = "inline-flex";
     // num0.style.position = "fixed";
     // num0.style.top = "39%";
@@ -537,8 +601,10 @@ btn_access.addEventListener('click', function () {
     // num16.style.display = "inline-flex";
     num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat')
     num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num18.classList.remove = "identificador2";
     num18.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
     num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num20.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
 });
 

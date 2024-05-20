@@ -116,7 +116,7 @@
     <!-- menuaccesShow -->
     <div class="menuacces ">
         <div class="menuComponentAcces">
-            
+
             <div class="sectionAcces">
                 <p class="mb-0 bold">Tamaño de fuente</p>
                 <div class="sectionBtnsacces">
@@ -525,19 +525,76 @@
 
                     <div class="escritorio mt-5 mb-5 ocultar ">
 
-                        <div class="colapsador ">
+                        <div class="colapsador">
 
-                            <button data-toggle="collapse" id="basicas-1" data-target="#basicas-1"
-                                class="btn btn-colapsar referencias-index waves-effect waves-light collapsed"
+                            <button data-toggle="collapse" data-target="#basicas-1" id="basic1"
+                                class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto" accesskey="b" tabindex="0">Generales</span>
+                                    <span id="ident17" class="identificador2 btn_fuente">17</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+
+                            <section id="basicas-1" class="collapse">
+
+                                <h3 class="sr-only">
+                                    Básicas
+                                </h3>
+
+                                <div class="colapsar-contenido">
+
+                                    <p class="parrafo">
+                                        PENDIENTE
+                                    </p>
+
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                        <div class="colapsador">
+
+                            <button data-toggle="collapse" data-target="#complementarias-1" id="basic2"
+                                class="btn btn-colapsar waves-effect waves-light collapsed" aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Tema 1</span>
+                                    <span id="ident18_f" class="identificador2">18</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+
+                            <section id="complementarias-1" class="collapse">
+
+                                <h3 class="sr-only">
+                                    Complementarias
+                                </h3>
+
+                                <div class="colapsar-contenido">
+
+                                    <p class="parrafo">
+                                        PENDIENTE
+                                    </p>
+
+                                </div>
+
+                            </section>
+
+                        </div>
+
+
+                        <!-- <div class="colapsador ">
+                            <button data-toggle="collapse" data-target="#basicas-1" id="basicas-1"
+                                class="btn btn-colapsar referencias-index waves-effect waves-light expandido btn-expandido collapsed"
                                 aria-expanded="false">
                                 <div class="btn-colapsar-layout">
                                     <span class="linea linea--naranja"></span>
-                                    <p class="btn-colapsar-texto mb-0">
-                                        Generales
-                                        <span id="ident17" class="identificador2 btn_fuente">17</span>
-                                        <!-- <span id="ident14" class="identificador2">14</span> -->
-                                    </p>
-                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                    <span class="btn-colapsar-texto">Generales</span>
+                                    <span id="ident17" class="identificador2 btn_fuente">17</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-times"></i></span>
                                 </div>
                             </button>
 
@@ -659,19 +716,17 @@
 
                             </div>
 
-                        </div>
+                        </div> -->
 
-                        <div class="colapsador ">
-
+                        <!-- <div class="colapsador ">
                             <button data-toggle="collapse" data-target="#basicas-2" id="basicas-2"
-                                class="btn btn-colapsar referencias-index waves-effect waves-light collapsed"
+                                class="btn btn-colapsar referencias-index waves-effect waves-light expandido btn-expandido "
                                 aria-expanded="false">
                                 <div class="btn-colapsar-layout">
                                     <span class="linea linea--naranja"></span>
-                                    <p class="btn-colapsar-texto  mb-0">Tema 1
-                                        <span id="ident18" class="identificador2">18</span>
-                                    </p>
-                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                    <span class="btn-colapsar-texto">Tema 1 </span>
+                                    <span id="ident18_f" class="identificador2">18</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-times"></i></span>
                                 </div>
                             </button>
 
@@ -753,31 +808,38 @@
 
                         </div>
 
-                    </div>
-                    <!-- </div> -->
+                    </div> -->
 
-                    <!-- btn lectura fácil -->
-                    <a id="btnLectura" href="./downl" download="" class="btnLecturaFacil">Lectura Facil</a>
+                        <!-- </div> -->
 
-                    <div class="movil mt-4 mb-5 mostrar">
+                        <div class="movil mt-4 mb-5 mostrar">
 
-                        <p class="parrafo instruccion-color-verde">
-                            <span class="font-weight-bold">Instrucciones: </span> Haz clic en el botón para descargar la
-                            información.
-                        </p>
+                            <p class="parrafo instruccion-color-verde">
+                                <span class="font-weight-bold">Instrucciones: </span> Haz clic en el botón para
+                                descargar la
+                                información.
+                            </p>
 
-                        <div class="text-right mt-4">
-                            <a href="#" download="" class="btn btn-referencias border rounded waves-effect waves-light"
-                                download="">
-                                Referencias
-                                <span class="parrafo sr-only">PDF file</span>
-                            </a>
+                            <div class="text-right mt-4">
+                                <a href="#" download=""
+                                    class="btn btn-referencias border rounded waves-effect waves-light" download="">
+                                    Referencias
+                                    <span class="parrafo sr-only">PDF file</span>
+                                </a>
+                            </div>
                         </div>
+
+                    </div>
+
+                    <div class="escritorio">
+                        <!-- btn lectura fácil -->
+                        <a id="btnLectura" href="./downl" download="" class="btnLecturaFacil">
+                            Lectura Facil
+                            <span id="ident19" class="identificador2 btn_fuente">19</span>
+                        </a>
                     </div>
 
                 </div>
-
-            </div>
 
         </section>
 
@@ -789,7 +851,7 @@
         <span id="btnVolver_Arriba" type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true"
             aria-label="Volver arriba">
             <i class="fa fa-angle-up" aria-hidden="true">
-                <span id="ident19" class="identificador2 btn_fuente">19</span>
+                <span id="ident20" class="identificador2 btn_fuente">20</span>
             </i>
         </span>
 

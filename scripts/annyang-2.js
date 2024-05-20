@@ -282,15 +282,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     var commands = {
-        'Página principal': getPageNext,
-        'Información general': getPageNext1,
-        'Módulo 1': getPageNext2,
-
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
+
+        '3': getPageNext,
+        'tres': getPageNext,
+
+        '4': getPageNext1,
+        'cuatro': getPageNext1,
+
+        '5': getPageNext2,
+        'cinco': getPageNext2,
 
         '6': section6,
         'seis': section6,
@@ -324,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
     annyang.addCommands(commands);
 
     annyang.addCallback("result", frases => {
-        console.log("El arreglo de frases: ", frases);
+        console.log("Usted a dicho: ", frases);
         function escribir() {
             document.getElementById("container_notes").innerHTML = ' <b>Usted a dicho: </b>' + "'" + frases + "'";
         }
@@ -348,6 +353,13 @@ let num12 = document.getElementById("ident12");
 let num13 = document.getElementById("ident13");
 
 btn_access.addEventListener('click', function () {
+    contenedor_notas.style.display = "flex";
+    contenedor_notas.style.flexDirection = "column";
+    contenedor_notas.style.justifyContent = "center";
+    contenedor_notas.style.alignItems = "center";
+    contenedor_notas.style.padding = "2rem";
+    contenedor_notas.style.zIndex = "53";
+
     num1.style.display = "flex";
     num1.style.transitionDuration = "3s";
     num1.style.animationDuration = "3s";

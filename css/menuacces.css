@@ -137,18 +137,17 @@
 
 /* Contenedor Notas */
 .contenedor_notas {
-    width: 200px;
-    height: 230px;
+    width: 900px;
+    height: 70px;
     position: fixed;
     background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%);
     z-index: 1;
-    top: 0;
     display: none;
-    overflow-y: auto;
-    bottom: 0;
+    bottom: 1rem;
+    left: 0;
     margin: auto;
-    border-bottom-right-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
+    right: 0;
+    border: 2px solid;
 }
 
 /* Fin Contenedor Notas */

@@ -44,6 +44,7 @@ body {
     width: 150px;
     border: none;
     font-size: 1.3rem;
+    position: relative;
     z-index: 1;
     background-color: white;
     transition-duration: 1s;
@@ -1361,6 +1362,7 @@ a.sidebar__enlace {
 }
 
 .btn-colapsar {
+    background: #FFF;
     box-shadow: none;
     color: #17529C;
     /* font-size: 1.4rem !important;*/
@@ -1369,6 +1371,7 @@ a.sidebar__enlace {
     padding: 0.84rem;
     text-transform: none;
     width: 100%;
+    z-index: 1;
 }
 
 .btn-expandido {
@@ -1923,7 +1926,7 @@ a:hover {
 
 .btn-colapsar {
     margin: 0;
-    background: #FBDAE9;
+    background: #FFF;
     color: #3C3D8B;
 }
 
@@ -1943,8 +1946,8 @@ a:hover {
 
 .btn-colapsar.btn-expandido {
     /* border-bottom: 2px solid #164992 !important; */
-    border: 2px solid #3C3D8B !important;
-    background: #fff;
+    /* border: 2px solid #3C3D8B !important; */
+    background: #FBDAE9;
     color: #3C3D8B;
 }
 
@@ -1953,6 +1956,12 @@ a:hover {
     color: #3C3D8B;
     transition: none !important;
 }
+
+/* .btn-colapsar.btn-expandido {
+    border: 2px solid #3C3D8B !important;
+    background: #fff;
+    color: #3C3D8B;
+} */
 
 .swiper-3d .swiper-slide-shadow {
     background: transparent !important;
