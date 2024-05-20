@@ -38,21 +38,21 @@ function detectarPosicionMouse(event) {
 
 
 // Función para tamaño de fuente
-let titulos = document.querySelectorAll("h2");
-let parrafos = document.querySelectorAll("p");
-let btnFont = document.getElementById("font_size");
+// let titulos = document.querySelectorAll("h2");
+// let parrafos = document.querySelectorAll("p");
+// let btnFont = document.getElementById("font_size");
 
-btnFont.addEventListener('click', function (e) {
-    titulos.forEach(function (titulo) {
-        titulo.style.fontSize = "2rem";
-        titulo.style.transitionDuration = "2s";
-        titulo.style.color = "red";
-    })
-    parrafos.forEach(function (parrafo) {
-        parrafo.style.color = "green";
-        parrafo.style.fontSize = "1.5rem";
-    })
-})
+// btnFont.addEventListener('click', function (e) {
+//     titulos.forEach(function (titulo) {
+//         titulo.style.fontSize = "2rem";
+//         titulo.style.transitionDuration = "2s";
+//         titulo.style.color = "red";
+//     })
+//     parrafos.forEach(function (parrafo) {
+//         parrafo.style.color = "green";
+//         parrafo.style.fontSize = "1.5rem";
+//     })
+// })
 
 
 // Función para cambiar el tamaño del cursor
