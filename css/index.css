@@ -2561,4 +2561,5 @@ h1.texto-azul:after,
 .resaltado{
     background-color: #000 !important;
     color: #ffff00 !important;
+    transition: all ease-in .4s;
 }
