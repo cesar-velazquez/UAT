@@ -2566,3 +2566,9 @@ h1.texto-azul:after,
 .dos-pad {
     padding-left: 2rem;
 }
+
+.resaltado{
+    background-color: #000 !important;
+    color: #ffff00 !important;
+    transition: all ease-in .4s;
+}

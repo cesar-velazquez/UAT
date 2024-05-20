@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
     <title>Operación de Unidades de Accesibilidad Tecnológica (UAT)</title>
     <link rel="icon" type="image/svg+xml" href="/images/favicon.ico" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
@@ -118,7 +116,7 @@
         <div class="menuComponentAcces">
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Tamaño de fuente</p>
+                <span class="mb-0 bold">Tamaño de fuente</span>
                 <div class="sectionBtnsacces">
                     <button id="font_size" class="btn btn-access" aria-label="Información de ayuda"
                         title="Información de ayuda">
@@ -131,7 +129,18 @@
             <div class="lineSectionacces"></div>
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Cursor</p>
+                <span class="mb-0 bold">Hipervínculos</span>
+                <div class="sectionBtnsacces">
+                    <button id="link_resaltar" class="btn btn-access" aria-label="Hipervínculos" title="Hipervínculos">
+                        <i class='bx bx-link-alt'></i>
+                    </button>
+                    <a href="" target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
+                </div>
+            </div>
+            <div class="lineSectionacces"></div>
+
+            <div class="sectionAcces">
+                <span class="mb-0 bold">Cursor</span>
                 <div class="sectionBtnsacces">
                     <button id="cursorBig" class="btn btn-access" aria-label="Información de ayuda"
                         title="Información de ayuda">
@@ -144,7 +153,7 @@
             <div class="lineSectionacces"></div>
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Lector Inmersivo</p>
+                <span class="mb-0 bold">Lector Inmersivo</span>
                 <div class="sectionBtnsacces">
                     <button id="" class="btn btn-access" aria-label="Información de ayuda" title="Información de ayuda"
                         data-toggle="modal" data-target="#information-1" accesskey="i" aria-hidden="true">
@@ -157,7 +166,7 @@
             <div class="lineSectionacces"></div>
 
             <div class="sectionAcces section_voice">
-                <p class="mb-0 bold">Comando por voz</p>
+                <span class="mb-0 bold">Comando por voz</span>
                 <div class="sectionBtnsacces">
                     <button id="btn-access" class="btn btn-access" aria-label="Botón accesibilidad">
                         <i class="fas fa-universal-access"></i>
@@ -170,7 +179,7 @@
             <div class="lineSectionacces"></div>
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Lectura fácil</p>
+                <span class="mb-0 bold">Lectura fácil</span>
                 <div class="sectionBtnsacces">
                     <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id=""
                         class="btnLectura btn btn-access" aria-label="Botón accesibilidad">
@@ -184,7 +193,7 @@
             <div class="lineSectionacces"></div>
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Linea de lectura</p>
+                <span class="mb-0 bold">Linea de lectura</span>
                 <div class="sectionBtnsacces">
                     <button onclick="showLine()" id="" class="btnLectura btn btn-access"
                         aria-label="Botón accesibilidad">
@@ -1077,6 +1086,7 @@
     <script src="scripts/annyang.js"></script>
     <script src="scripts/menuacces.js"></script>
     <script src="scripts/change-fonts.js"></script>
+    <script src="scripts/links.js"></script>
 
     <!-- Funcionalidad para Progress-bar-scroll del inicio -->
     <script src="scripts/scroll-timeline.js"></script>

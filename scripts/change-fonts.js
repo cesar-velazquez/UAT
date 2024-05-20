@@ -1,5 +1,4 @@
 
-
 const btnAumentarFuente = document.getElementById('font_size');
 const pleca = document.getElementById('pleca_uv');
 const subtitulos = document.querySelectorAll("h2");
@@ -10,7 +9,7 @@ let tamFuenteSubtitulos = 1.5; // Tamaño de fuente subtitulos
 let tamFuentePleca = 1; // Tamaño de fuente pleca
 
 btnAumentarFuente.addEventListener('click', function() {
-
+    
     tamFuenteParrafos += 0.25; // Aumentar 0.25 rem en cada click
     tamFuenteSubtitulos += 0.25;
     tamFuentePleca += 0.25;
