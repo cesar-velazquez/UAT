@@ -20,7 +20,7 @@
     position: absolute;
     background: #ff000057;
     display: inline;
-    bottom: 1.5rem;
+    bottom: 6.5rem;
     left: 16rem;
 }
 
@@ -158,18 +158,21 @@
     z-index: 1;
     bottom: 1rem;
     right: 1rem;
-    background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%);
+    /* background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%); */
+    background-color: darkgray;
+    color: black;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
 }
 
-.bx-microphone {
-    /* font-size: 1.5rem; */
-}
+/* .micro {
+    font-size: 1.4rem;
+} */
 
 .activeMicro {
     color: #800035;
@@ -177,8 +180,7 @@
     font-size: 1.5rem;
     padding: 1rem;
     transition-duration: 5s;
-    background-color: greenyellow;
-
+    background-color: rgb(7, 148, 37);
 }
 
 /* Fin Sección Microf */
@@ -186,12 +188,15 @@
 
 
 .btnAccessUniversal {
-    background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%);
+    /* background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%); */
+    background-color: white;
     color: black;
     border-radius: 50%;
     padding: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    /* width: 3.5rem;
+    height: 3.5rem; */
+    width: 80px;
+    height: 80px;
     font-size: 1.3125rem;
     display: flex;
     justify-content: center;
@@ -237,22 +242,29 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    border: 5px solid darkblue;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     overflow-y: scroll;
-    padding: 1rem 0rem;
 }
 
 .sectionAcces {
-    background-color: darkcyan;
+    background-color: rgb(255 255 255);
     width: 200px;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: .5rem;
-    border-radius: 1rem;
     padding: .5rem;
+    border-bottom: 2px solid gray
+}
+
+.btn_accesible {
+    border: none;
+    background-color: white;
+    font-size: 1.125rem;
+}
+
+.btn_accesible:focus {
+    outline: none;
+    border: none;
 }
 
 .sectionBtnsacces {

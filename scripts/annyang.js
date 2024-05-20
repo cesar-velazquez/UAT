@@ -553,8 +553,10 @@ btn_access.addEventListener('click', function () {
     parrafos.forEach(parrafo => parrafo.style.display = 'block');
     annyang.start();
     console.log("inicioFrases");
-    microfono.classList.add("activeMicro");
+    microfono.classList.remove("bxs-microphone-off", "bx-flip-horizontal");
+    microfono.classList.add("activeMicro", "bx-microphone", "bx-flip-horizontal");
     microfono.style.transitionDuration = "1s";
+
     contenedor_notas.style.display = "flex";
     contenedor_notas.style.flexDirection = "column";
     contenedor_notas.style.justifyContent = "center";
@@ -565,7 +567,7 @@ btn_access.addEventListener('click', function () {
     // num0.style.position = "fixed";
     // num0.style.top = "39%";
     // num0.style.right = "3.2rem";
-    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat')
+    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.style.display = "flex";
     num1.style.transitionDuration = "3s";
     num1.style.animationDuration = "3s";

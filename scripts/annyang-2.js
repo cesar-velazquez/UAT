@@ -266,22 +266,55 @@ document.addEventListener("DOMContentLoaded", function () {
         PositionTop100(element);
     }
 
+    let section7_ig = function () {
+        let element = document.getElementById('section7_ig');
+        PositionTop100(element);
+    }
+
+    let section10 = function () {
+        let element = document.getElementById('section10');
+        PositionTop100(element);
+    }
+
+    let section11 = function () {
+        let element = document.getElementById('section11');
+        PositionTop100(element);
+    }
+
     let section12 = function () {
         let element = document.getElementById("ident12_v");
         PositionTop100(element);
     }
 
 
-
-    // Función para reproducir el video
-    function playvideo() {
-        let iframe = document.getElementById('video');
+    let abrirAyuda = function () {
+        let modal = document.getElementById("methods-help");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
     }
 
+    let cerrarAyuda = function () {
+        let modal = document.getElementById("methods-help");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
 
-
+    let volver_Arriba = document.getElementById("volver_Arr");
+    let volverA = function () {
+        volver_Arriba.click();
+    }
 
     var commands = {
+
+        '0': abrirAyuda,
+        'cero': abrirAyuda,
+
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
 
@@ -300,13 +333,55 @@ document.addEventListener("DOMContentLoaded", function () {
         '6': section6,
         'seis': section6,
 
+        '7': section7_ig,
+        'Siete': section7_ig,
+
+        "8": firstab,
+        "ocho": firstab,
+
+        "9": secondtab,
+        "nueve": secondtab,
+
+        '10': section10,
+        'Diez': section10,
+
+        '11': section11,
+        'once': section11,
+
         '12': section12,
         'doce': section12,
 
-        '13': playvideo,
-        'Trece': playvideo,
+        '13': function () {
+            console.log("Comando 'trece' reconocido.");
+            var player = document.getElementById('video');
+            if (player && player.tagName === 'IFRAME') {
+                var iframe = player.contentWindow || player.contentDocument;
+                if (iframe.document) {
+                    iframe = iframe.document;
+                }
+                var videoElement = iframe.querySelector('video');
+                if (videoElement && typeof videoElement.pause === 'function') {
+                    if (videoElement.paused) {
+                        videoElement.play();
+                    } else {
+                        videoElement.pause();
+                    }
+                } else {
+                    console.error('No se pudo encontrar un elemento de video válido dentro del iframe.');
+                }
+            } else {
+                console.error('No se pudo encontrar el elemento de video o no es un iframe.');
+            }
+        },
 
 
+
+        // 'Trece': playvideo,
+
+        '14': volverA,
+        'catorce': volverA,
+
+        'cerrar': cerrarAyuda,
 
         'Inicio': inicioPagina,
         'Desplazar hacia abajo': scrollBottom,
@@ -320,8 +395,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Pasar tarjeta 2": nexttarget2,
         "Volver a tarjeta 2": previoustarget,
         "Volver a tarjeta 1": previoustarget1,
-        "Segunda pestaña": secondtab,
-        "Volver a primer pestaña": firstab,
         "Actividad": activity,
         "Abrir opción 1": option1
     };
@@ -343,14 +416,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 const btn_access = document.getElementById('btn-access');
 let contenedor_notas = document.getElementById("container_notes");
+let num1_h = document.getElementById("ident1_h");
+let cerrar = document.getElementById("identcerrar");
+let microfono = document.getElementById("micro");
+
+let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
 let num2 = document.getElementById("ident2");
 let num3 = document.getElementById("ident3");
 let num4 = document.getElementById("ident4");
 let num5 = document.getElementById("ident5");
 let num6 = document.getElementById("ident6");
+let num7 = document.getElementById("ident7");
+let num8 = document.getElementById("ident8");
+let num9 = document.getElementById("ident9");
+let num10 = document.getElementById("ident10");
+let num11 = document.getElementById("ident11");
 let num12 = document.getElementById("ident12");
 let num13 = document.getElementById("ident13");
+let num14 = document.getElementById("ident14");
 
 btn_access.addEventListener('click', function () {
     contenedor_notas.style.display = "flex";
@@ -360,6 +444,11 @@ btn_access.addEventListener('click', function () {
     contenedor_notas.style.padding = "2rem";
     contenedor_notas.style.zIndex = "53";
 
+    microfono.classList.add("activeMicro");
+    microfono.style.transitionDuration = "1s";
+
+
+    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.style.display = "flex";
     num1.style.transitionDuration = "3s";
     num1.style.animationDuration = "3s";
@@ -369,8 +458,18 @@ btn_access.addEventListener('click', function () {
     num4.style.display = "inline-flex";
     num5.style.display = "inline-flex";
     num6.classList.add("ident_Universal");
+    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
     num6.classList.add('animate__animated', 'animate__heartBeat');
     num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
+    cerrar.style.display = "inline-flex";
+    num1_h.style.display = "inline-flex";
 })
 
