@@ -135,19 +135,24 @@
 
 /* Fin Identificador 1 */
 
+.instruccion{
+    font-size: 1.3rem;
+}
+
 /* Contenedor Notas */
 .contenedor_notas {
     width: 900px;
     height: 70px;
     position: fixed;
-    background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%);
+    /* background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%); */
+    background-color: white;
     z-index: 1;
     display: none;
     bottom: 1rem;
     left: 0;
     margin: auto;
     right: 0;
-    border: 2px solid;
+    border: 2px solid #17529C;
 }
 
 /* Fin Contenedor Notas */
@@ -155,7 +160,7 @@
 /* Sección Microfono */
 .microfono {
     position: fixed;
-    z-index: 1;
+    z-index: 53;
     bottom: 1rem;
     right: 1rem;
     /* background: linear-gradient(120deg, #BDE4FA 0%, #FADAE9 80%); */

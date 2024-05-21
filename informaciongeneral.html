@@ -30,8 +30,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
-
+<body onmousemove="detectarPosicionMouse(event);">
+    <div id="readline"></div>
     <!-- Instrucción para información de ayuda -->
     <div>
         <p class="sr-only">
@@ -55,7 +55,7 @@
     <!-- Prueba -->
     <div class="ocultar">
         <button onclick="handleMenu()" class="btnAccessUniversal">
-            <i class="fas fa-universal-access"></i>
+            <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
         </button>
 
         <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
@@ -115,81 +115,105 @@
     <!-- menuaccesShow -->
     <div class="menuacces ">
         <div class="menuComponentAcces">
-            <div class="sectionAcces">
-                <p class="mb-0 bold">Tamaño de fuente</p>
-                <div class="sectionBtnsacces">
-                    <button id="font_size" class="btn btn-access" aria-label="Información de ayuda"
-                        title="Información de ayuda">
-                        <i class='bx bx-font-size'></i>
-                    </button>
-                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
-                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
-                </div>
-            </div>
-            <div class="lineSectionacces"></div>
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Cursor</p>
-                <div class="sectionBtnsacces">
-                    <button id="cursorBig" class="btn btn-access" aria-label="Información de ayuda"
-                        title="Información de ayuda">
-                        <i class='bx bxs-left-top-arrow-circle'></i>
+                <!-- <span class="mb-0 bold">Tamaño de fuente</span> -->
+                <!-- class="sectionBtnsacces" -->
+                <div>
+                    <!-- class="btn btn-access" aria-label="Información de ayuda" -->
+                    <!-- title="Información de ayuda" -->
+                    <button class="btn_accesible" id="font_size">
+                        <!-- <i class='bx bx-font-size'></i> -->
+                        <img src="./images/accesibilidad/MA-_m-tamanofuente-a.png" alt="Icon auxiliar tamaño de fuente">
+                        Tamaño de fuente
                     </button>
-                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
-                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
                 </div>
             </div>
-            <div class="lineSectionacces"></div>
+
+            <!-- <div class="lineSectionacces"></div> -->
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Lector Inmersivo</p>
-                <div class="sectionBtnsacces">
-                    <button id="" class="btn btn-access" aria-label="Información de ayuda" title="Información de ayuda"
+                <!-- <span class="mb-0 bold">Hipervínculos</span> -->
+                <!-- class="sectionBtnsacces" -->
+                <div>
+                    <!-- class="btn btn-access" aria-label="Hipervínculos" title="Hipervínculos" -->
+                    <button class="btn_accesible" id="link_resaltar">
+                        <!-- <i class='bx bx-link-alt'></i> -->
+                        <img src="./images/accesibilidad/MA-_m-hiper-a.png" alt="Icon auxiliar hipervinculos">
+                        Hipervínculos
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="lineSectionacces"></div> -->
+
+            <div class="sectionAcces">
+                <!-- <span class="mb-0 bold">Cursor</span> -->
+                <!-- class="sectionBtnsacces" -->
+                <div>
+                    <!-- aria-label="Información de ayuda" 
+                        title="Información de ayuda" -->
+                    <button id="cursorBig" class="btn_accesible">
+                        <!-- <i class='bx bxs-left-top-arrow-circle'></i> -->
+                        <img src="./images/accesibilidad/MA-_m-cursor-a.png" alt="Icon auxiliar cursor">
+                        Cursor
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="lineSectionacces"></div> -->
+
+            <div class="sectionAcces">
+                <!-- <span class="mb-0 bold">Lector Inmersivo</span> -->
+                <!-- class="sectionBtnsacces" -->
+                <div>
+                    <button id="" class="btn_accesible" aria-label="Información de ayuda" title="Información de ayuda"
                         data-toggle="modal" data-target="#information-1" accesskey="i" aria-hidden="true">
-                        <i class='bx bxs-music'></i>
+                        <!-- <i class='bx bxs-music'></i> -->
+                        <img src="./images/accesibilidad/MA-_m-lector-a.png" alt="Icon auxiliar Lector">
+                        Lector Inmersivo
                     </button>
-                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
-                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
                 </div>
             </div>
-            <div class="lineSectionacces"></div>
+            <!-- <div class="lineSectionacces"></div> -->
 
             <div class="sectionAcces section_voice">
-                <p class="mb-0 bold">Comando por voz</p>
-                <div class="sectionBtnsacces">
-                    <button id="btn-access" class="btn btn-access" aria-label="Botón accesibilidad">
-                        <i class="fas fa-universal-access"></i>
+                <!-- <span class="mb-0 bold">Comando por voz</span> -->
+                <!-- class="sectionBtnsacces" -->
+                <div>
+                    <button id="btn-access" class="btn_accesible" aria-label="Botón accesibilidad">
+                        <!-- <i class="fas fa-universal-access"></i> -->
+                        <img src="./images/accesibilidad/MA-_m-comandos-a.png" alt="Icon auxiliar comandos de voz">
+                        Comandos de voz
                     </button>
-                    <a href="./descargables/Ayuda/ComandosporvozEE.pdf" target="_blank" class="questionAcces"><i
-                            class='bx bx-question-mark'></i></a>
                 </div>
             </div>
 
-            <div class="lineSectionacces"></div>
+            <!-- <div class="lineSectionacces"></div> -->
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Lectura fácil</p>
-                <div class="sectionBtnsacces">
+                <!-- <span class="mb-0 bold">Lectura fácil</span> -->
+                <!-- class="sectionBtnsacces" -->
+                <div>
                     <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id=""
-                        class="btnLectura btn btn-access" aria-label="Botón accesibilidad">
-                        <i class='circleacces bx bx-left-arrow-circle'></i>
+                        class="btn_accesible" aria-label="Botón accesibilidad">
+                        <img src="./images/accesibilidad/MA-_m-lecturaf-a.png" alt="Icon auxiliar lectura fácil">
+                        Lectura fácil
+                        <!-- <i class='circleacces bx bx-left-arrow-circle'></i> -->
                     </a>
-                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
-                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
                 </div>
             </div>
 
-            <div class="lineSectionacces"></div>
+            <!-- <div class="lineSectionacces"></div> -->
 
             <div class="sectionAcces">
-                <p class="mb-0 bold">Linea de lectura</p>
-                <div class="sectionBtnsacces">
-                    <button onclick="showLine()" id="" class="btnLectura btn btn-access"
-                        aria-label="Botón accesibilidad">
-                        <i class='bx bx-underline'></i>
+                <!-- <span class="mb-0 bold">Linea de lectura</span> -->
+                <!-- class="sectionBtnsacces" -->
+                <div>
+                    <!-- btnLectura btn btn-access -->
+                    <button onclick="showLine()" id="" class="btn_accesible" aria-label="Botón accesibilidad">
+                        <!-- <i class='bx bx-underline'></i> -->
+                        <img src="./images/accesibilidad/MA-_m-regla-a.png" alt="Icon auxiliar línea de lectura">
+                        Línea de lectura
                     </button>
-                    <a href="https://uvmx-my.sharepoint.com/:w:/g/personal/fernansantiago_uv_mx/EZbYej0a50hGjU4ve_NCcesBOyVGcGH679zd3dF8Od9fEA?rtime=aZH1nWlp3Eg"
-                        target="_blank" class="questionAcces"><i class='bx bx-question-mark'></i></a>
                 </div>
             </div>
 
@@ -474,8 +498,8 @@
 
                 </div>
 
-                <p id="ident12_v" class="instrucciones"><b>Instruction</b>: Click on the video to watch it.</p>
-                <p id="ident12" class="identificador2 ">12</p>
+                <!-- <p id="ident12_v" class="instrucciones"><b>Instruction</b>: Click on the video to watch it.</p>
+                <p id="ident12" class="identificador2 ">12</p> -->
                 <!-- <div class="position-video">
                     <p id="ident13" class="play_video identificador2 ">13</p> 
                     <iframe id="video" class="video-frame"
@@ -494,7 +518,7 @@
                     <p id="ident13" class="play_video identificador2 ">13</p>
                 </div> -->
 
-                <div class="position-video">
+                <!-- <div class="position-video">
                     <iframe id="video" width="560" height="315"
                         src="https://www.youtube.com/embed/0k5P1SCiybg/?controls=0" title="YouTube video player"
                         frameborder="0"
@@ -502,11 +526,8 @@
                         allowfullscreen muted>
                     </iframe>
                     <p id="ident13" class="play_video identificador2 ">13</p>
-                </div>
-
-                <div>
-                    <video src="./">Mi video</video>
-                </div>
+                </div> -->
+                
             </div>
         </section>
     </main>
