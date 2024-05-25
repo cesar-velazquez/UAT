@@ -10,6 +10,15 @@
     }
 }
 
+.contenedorActivo {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-Index: 53;
+}
+
 .ident_Universal {
     display: inline-flex !important;
     transition-duration: 3s;
